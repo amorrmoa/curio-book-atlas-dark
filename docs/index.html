@@ -571,6 +571,52 @@ body > .wrap, body > .foot {position: relative; z-index: 1;}
   .curio-book-ocean-side {display: none;}
 }
 @media print {.curio-book-ocean-side {display:none;}}
+   
+/* Mobile publisher atlas navigation: keep the atlas accessible without crowding the header. */
+@media (max-width:900px) {
+  .masthead-right { gap:10px; }
+  .masthead-right > a[href="publishers.html"] {
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    font-size:12px;
+    font-weight:800;
+    text-align:center;
+    white-space:nowrap;
+    min-height:40px;
+    padding:8px 13px;
+  }
+}
+@media (max-width:720px) {
+  .masthead {
+    height:auto;
+    min-height:106px;
+    flex-direction:column;
+    align-items:stretch;
+    justify-content:center;
+    gap:11px;
+    padding-top:13px;
+    padding-bottom:13px;
+  }
+  .masthead-right {
+    display:flex;
+    width:100%;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+  }
+  .masthead-right > a[href="publishers.html"] {
+    flex:1 1 auto;
+    min-width:0;
+    min-height:40px;
+  }
+  .masthead-right > .csv-export { flex:none; }
+}
+@media (max-width:350px) {
+  .masthead-right > a[href="publishers.html"] {padding:8px 6px;font-size:11px;}
+  .masthead-right {gap:8px;}
+}
+
 </style>
 </head>
 <body>
