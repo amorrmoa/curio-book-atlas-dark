@@ -1,0 +1,59 @@
+name: Publish manually curated Curio Book Atlas
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - data/curio_catalog.xlsx
+      - tools/build_catalog.py
+      - docs/**
+      - tests/**
+      - .github/workflows/publish-manual-catalog.yml
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: curio-manual-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check spreadsheet and classification
+        run: python -m unittest discover -s tests -v
+      - name: Build catalog directly from Excel
+        run: python tools/build_catalog.py
+      - name: Commit generated public files
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/data/books.json docs/data/catalog.js
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: rebuild from Excel [skip ci]'
+            git push
+          fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: docs
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish website
+        id: deployment
+        uses: actions/deploy-pages@v4
