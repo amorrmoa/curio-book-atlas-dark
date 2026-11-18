@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#151c23">
+<meta name="description" content="『奇想洋書航路』の出版社アトラス。掲載書籍の出版社から本を探し、確認済みの公式カタログや新刊ページへ移動できます。">
+<title>出版社アトラス | 奇想洋書航路</title>
+<style>
+:root{--bg:#151c23;--panel:#222b34;--panel2:#2a3540;--ink:#f0f0eb;--muted:#b8c6c8;--line:#53636b;--aqua:#b7ddd3;--pink:#efb3c1;--lav:#c9bae9;--gold:#f1d597;--blue:#b6c6ea}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse 55% 38% at 100% 0%,#3c425650,transparent 76%),repeating-linear-gradient(90deg,transparent 0 99px,#ffffff03 99px 100px),var(--bg);color:var(--ink);font-family:Arial,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;line-height:1.65}
+a{color:inherit}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1330px;padding:0 44px;margin:auto;position:relative;z-index:1}
+.masthead{height:94px;display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid #76828a;gap:20px}.brand{display:flex;gap:13px;align-items:center;text-decoration:none;font-size:20px;letter-spacing:.11em;font-weight:800;white-space:nowrap}.brand small{display:block;font-size:10px;letter-spacing:.25em;color:var(--muted);margin-top:-2px}.brand-symbol{background:var(--aqua);height:28px;width:28px;transform:rotate(-16deg);position:relative;flex:none}.brand-symbol:after{content:"";display:block;position:absolute;right:-8px;top:-9px;background:var(--pink);width:18px;height:18px;border-radius:50%}.nav{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.nav a{padding:10px 16px;border:1px solid #82939a;color:var(--ink);text-decoration:none;font-size:12px;font-weight:700;letter-spacing:.06em}.nav a.current{background:var(--aqua);border-color:var(--aqua);color:#14232c}.nav a:not(.current):hover{background:#33434c}
+.hero{padding:74px 0 48px;display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:44px;align-items:center;border-bottom:1px solid var(--line)}.kicker{font-size:12px;letter-spacing:.24em;color:var(--aqua);font-weight:900}.hero h1{font-size:clamp(39px,5.6vw,76px);letter-spacing:-.035em;font-weight:800;margin:14px 0 20px;line-height:1.12}.hero h1 em{font-style:normal;color:var(--pink)}.lead{font-size:15px;color:#d0dcdf;max-width:680px;margin:0;line-height:2}.abstract{height:205px;position:relative;isolation:isolate}.abstract::before{content:"";position:absolute;width:190px;height:185px;left:18px;top:8px;border-radius:50%;background:var(--aqua);clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}.abstract::after{content:"";position:absolute;left:0;top:16px;width:215px;height:165px;background:var(--lav);clip-path:polygon(5% 5%,87% 24%,47% 96%);mix-blend-mode:multiply}.abstract .disk{position:absolute;z-index:2;background:var(--pink);width:80px;height:80px;border-radius:50%;left:138px;top:105px}.abstract .slash{position:absolute;z-index:3;background:#162530;width:15px;height:230px;left:108px;top:-12px;transform:rotate(36deg)}.stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}.stat{display:flex;gap:12px;align-items:center;border:1px solid var(--line);padding:8px 14px;font-size:12px;color:var(--muted)}.stat strong{font-size:22px;color:var(--ink)}
+.bar{margin-top:28px;display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:12px;align-items:end}.filter-label{display:block;font-size:11px;color:var(--muted);margin-bottom:5px;letter-spacing:.07em}.search,.select{height:48px;background:var(--panel);border:1px solid #667984;color:var(--ink);padding:0 14px;min-width:0}.search{width:100%}.select{min-width:148px}.search::placeholder{color:#aab5bd}.section-intro{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin:36px 0 18px}.section-intro h2{font-size:24px;margin:0;letter-spacing:-.02em}.section-intro p{color:var(--muted);font-size:12px;margin:0}.pillset{display:flex;gap:8px;flex-wrap:wrap}.pill{border:1px solid #687b83;background:transparent;color:var(--ink);padding:9px 15px;font-weight:700;font-size:12px}.pill.active{background:var(--aqua);color:#192832;border-color:var(--aqua)}
+.atlas-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:26px 0 64px}.publisher-card{position:relative;background:var(--panel);border:1px solid #57636e;min-width:0;display:flex;flex-direction:column;box-shadow:6px 6px 0 #11181e;transition:border-color .15s,transform .15s}.publisher-card:hover{border-color:var(--aqua);transform:translateY(-2px)}.publisher-card:before{content:"";position:absolute;left:-1px;right:-1px;height:5px;top:-1px;background:var(--stripe,var(--aqua))}.publisher-card:nth-child(4n+1){--stripe:var(--lav)}.publisher-card:nth-child(4n+2){--stripe:var(--pink)}.publisher-card:nth-child(4n+3){--stripe:var(--aqua)}.publisher-card:nth-child(4n){--stripe:var(--gold)}.card-top{padding:22px 22px 13px}.card-code{font-size:10px;letter-spacing:.2em;color:#9eafb7;font-weight:900}.card-title{margin:12px 0 10px;font-size:20px;line-height:1.3;word-wrap:break-word;font-family:Georgia,"Yu Mincho",serif}.card-meta{display:flex;align-items:center;gap:9px;flex-wrap:wrap;color:var(--muted);font-size:11px}.count{padding:3px 10px;background:#3b4651;color:var(--ink);font-weight:800;font-size:11px}.card-themes{padding:0 22px 15px;display:flex;gap:6px;flex-wrap:wrap}.theme-chip{font-size:11px;padding:3px 7px;border:1px solid #596c74;color:#c3d4d9}.card-actions{display:flex;flex-wrap:wrap;gap:7px;margin:auto 22px 0;padding-bottom:18px}.link-button{padding:8px 11px;display:inline-flex;gap:7px;align-items:center;font-size:12px;font-weight:700;text-decoration:none;border:1px solid #74878d;cursor:pointer;line-height:1.4;background:transparent;color:var(--ink)}.link-button.primary{background:var(--aqua);border-color:var(--aqua);color:#17272e}.link-button:hover{filter:brightness(1.1)}.link-button.disabled{opacity:.7;font-size:11px;font-weight:400;border-style:dashed;cursor:default}
+.publisher-details{border-top:1px solid #52616d;background:#1a232b;padding:0 22px}.publisher-details summary{font-size:12px;font-weight:700;list-style:none;cursor:pointer;padding:12px 0;color:var(--aqua)}.publisher-details summary::-webkit-details-marker{display:none}.publisher-details summary::after{content:" +"}.publisher-details[open] summary::after{content:" −"}.book-list{padding:2px 0 18px;list-style:none;margin:0}.book-list li{padding:8px 0;border-top:1px solid #3f505a;font-size:12px}.book-list a{font-weight:700;text-decoration:none}.book-list a:hover{text-decoration:underline}.book-list small{color:var(--muted);display:block;font-size:11px;margin-top:2px}.aside-note{color:var(--muted);font-size:12px;line-height:1.8;border-top:1px solid var(--line);padding:28px 0 72px}.empty{padding:70px 20px;background:var(--panel);color:var(--muted);text-align:center;border:1px solid var(--line);margin:24px 0 64px}.foot{border-top:1px solid var(--line);padding:28px 0;background:#101820;color:var(--muted);font-size:12px}.foot .wrap{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
+/* Keep the existing book-ocean artwork in wide side gutters */
+.side-ocean{position:fixed;top:0;bottom:0;width:max(0px,calc((100vw - 1330px)/2));z-index:0;pointer-events:none;background-size:cover;background-repeat:no-repeat;opacity:.82;filter:saturate(.83) brightness(.88)}.side-ocean.left{left:0;background-image:url("assets/book-ocean-left.webp");background-position:53% center;mask-image:linear-gradient(to right,#000 0%,#000 72%,transparent 100%)}.side-ocean.right{right:0;background-image:url("assets/book-ocean-right.webp");background-position:49% center;mask-image:linear-gradient(to left,#000 0%,#000 72%,transparent 100%)}
+@media(max-width:1499px){.side-ocean{display:none}}@media(max-width:1000px){.atlas-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.wrap{padding:0 25px}}@media(max-width:720px){.wrap{padding:0 17px}.masthead{height:auto;min-height:90px;align-items:flex-start;padding-top:18px;padding-bottom:18px;flex-direction:column;gap:12px}.brand{font-size:17px}.nav{gap:7px}.nav a{padding:6px 9px;font-size:11px}.hero{padding-top:44px;grid-template-columns:minmax(0,1fr)}.abstract{display:none}.hero h1{font-size:44px}.lead{font-size:13px}.bar{grid-template-columns:1fr 1fr}.bar>.search-block{grid-column:1/-1}.select{width:100%;min-width:0}.atlas-grid{grid-template-columns:1fr}.section-intro{display:block}.section-intro p{margin-top:4px}.card-title{font-size:21px}}
+</style>
+<script src="./data/catalog.js" defer></script>
+<script src="./data/publisher_links.js" defer></script>
+<script defer>
+window.addEventListener('DOMContentLoaded',()=>{
+ const data=window.CURIO_ATLAS||{books:[],themes:[]};
+ const books=Array.isArray(data.books)?data.books:[];
+ const themeLabels=Object.fromEntries((data.themes||[]).map(t=>[t.id,t.name]));
+ const curated=window.CURIO_PUBLISHER_LINKS||{};
+ const homepages=window.CURIO_PUBLISHER_HOMEPAGES||{};
+ const $=id=>document.getElementById(id);
+ const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const safeUrl=x=>/^https:\/\//i.test(String(x||''))?String(x):'';
+ // Co-publications are presented under each of their named publishers.
+ // Each publisher's book count is the number of DISTINCT book IDs matched.
+ const index=new Map();let missing=0;
+ for (const b of books){
+   const names=String(b.publisher||'').split(/\s+\/\s+/).map(s=>s.trim()).filter(Boolean);
+   if(!names.length){missing++;continue}
+   for(const name of new Set(names)){
+     if(!index.has(name))index.set(name,{name,books:[],themes:new Map()});
+     const entry=index.get(name);entry.books.push(b);
+     const theme=themeLabels[b.theme]||'その他';
+     entry.themes.set(theme,(entry.themes.get(theme)||0)+1);
+   }
+ }
+ let publishers=[...index.values()].map(entry=>({...entry,count:entry.books.length,catalog:curated[entry.name]||null,link:curated[entry.name]||homepages[entry.name]||null}));
+ const $query=$('pub-query'), $sort=$('sort'),$grid=$('publishers-grid'),$empty=$('no-results');
+ let filter='all';
+ const urlQuery=new URLSearchParams(location.search).get('q');
+ if(urlQuery)$query.value=urlQuery;
+ function matched(){
+   const q=$query.value.trim().toLocaleLowerCase();
+   return publishers.filter(p=>{
+     if(filter==='catalog'&&p.catalog?.type!=='catalog')return false;
+     if(filter==='official'&&!p.link)return false;
+     if(filter==='multiple'&&p.count<2)return false;
+     if(q&&![p.name,...p.books.map(b=>b.title),...p.themes.keys()].join(' ').toLocaleLowerCase().includes(q))return false;
+     return true;
+   }).sort((a,b)=>$sort.value==='az'?a.name.localeCompare(b.name,'en'):$sort.value==='za'?b.name.localeCompare(a.name,'en'):b.count-a.count||a.name.localeCompare(b.name,'en'));
+ }
+ function card(p,i){
+   const words=[...p.themes.entries()].sort((a,b)=>b[1]-a[1]).slice(0,3);
+   const link=safeUrl(p.link?.url);
+   const bookUrl=`index.html?publisher=${encodeURIComponent(p.name)}#catalog`;
+   const bookList=p.books.slice().sort((a,b)=>(b.year||0)-(a.year||0)||(b.month||0)-(a.month||0)||a.title.localeCompare(b.title,'en'));
+   return `<article class="publisher-card" id="pub-${i}">
+     <div class="card-top"><div class="card-code">PUBLISHER / ${String(i+1).padStart(3,'0')}</div><h3 class="card-title">${esc(p.name)}</h3><div class="card-meta"><span class="count">${p.count}冊</span>${p.catalog?'<span>公式カタログ・書籍案内</span>':p.link?'<span>出版社公式HP・刊行元</span>':'<span>公式HP確認中</span>'}</div></div>
+     <div class="card-themes">${words.map(([label])=>`<span class="theme-chip">${esc(label)}</span>`).join('')}</div>
+     <div class="card-actions"><a href="${bookUrl}" class="link-button primary">掲載書籍を検索 ↗</a>${link?`<a class="link-button" href="${esc(link)}" target="_blank" rel="noopener noreferrer">${esc(p.link.caption||'公式ページ')} ↗</a>`:'<span class="link-button disabled">公式HP確認中</span>'}</div>
+     <details class="publisher-details"><summary>掲載書籍をここで見る（${p.count}冊）</summary><ul class="book-list">${bookList.map(b=>`<li><a href="index.html?publisher=${encodeURIComponent(p.name)}#catalog">${esc(b.title)}</a><small>${esc(b.author||'著者未登録')} · ${b.year?`${b.year}年${b.month?b.month+'月':''}`:'刊行年未定'}</small></li>`).join('')}</ul></details></article>`;
+ }
+ function render(){const list=matched();$('visible-count').textContent=list.length;$grid.innerHTML=list.map(card).join('');$empty.hidden=!!list.length;$grid.hidden=!list.length;}
+ $('total-publishers').textContent=publishers.length;
+ $('all-books').textContent=books.length;
+ $('link-count').textContent=publishers.filter(p=>p.link).length;
+ $('publishers-grid').setAttribute('aria-label',`出版社一覧 ${publishers.length}件`);
+ $query.addEventListener('input',render);$sort.addEventListener('change',render);
+ document.querySelectorAll('[data-filter]').forEach(btn=>btn.addEventListener('click',()=>{filter=btn.dataset.filter;document.querySelectorAll('[data-filter]').forEach(x=>{x.classList.toggle('active',x===btn);x.setAttribute('aria-pressed',String(x===btn))});render()}));
+ $('export-pubs').addEventListener('click',()=>{
+   const rows=[['出版社','掲載冊数','主な掲載テーマ','公式リンク種別','公式URL'],...matched().map(p=>[p.name,p.count,[...p.themes.entries()].sort((a,b)=>b[1]-a[1]).slice(0,3).map(x=>x[0]).join(' / '),p.link?.caption||'',safeUrl(p.link?.url)])];
+   const safe=v=>{let text=String(v??'');if(/^[\s\uFEFF]*[=+\-@\t\r]/.test(text))text="'"+text;return `"${text.replace(/"/g,'""')}"`};
+   const blob=new Blob(['\uFEFF'+rows.map(row=>row.map(safe).join(',')).join('\r\n')],{type:'text/csv;charset=utf-8;'});
+   const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='curio_publishers.csv';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+ });
+ render();
+});
+</script>
+</head>
+<body>
+<div class="side-ocean left" aria-hidden="true"></div><div class="side-ocean right" aria-hidden="true"></div>
+<div class="wrap">
+<header class="masthead"><a class="brand" href="index.html"><span class="brand-symbol" aria-hidden="true"></span><span>奇想洋書航路<small>CURIO BOOK ATLAS</small></span></a><nav class="nav" aria-label="メインナビゲーション"><a href="index.html">月別の本棚</a><a class="current" aria-current="page" href="publishers.html">出版社アトラス</a><a href="index.html#themes">14のテーマ</a></nav></header>
+<main>
+<section class="hero"><div><span class="kicker">CURIO / PUBLISHER ATLAS</span><h1>出版社から、<br><em>本の航路をたどる。</em></h1><p class="lead">掲載書籍を刊行元からたどるための索引です。大学出版局から独立系出版社、美術館の刊行物まで。公式カタログがあればそちらを優先し、未登録の場合は出版社公式HPへ案内します。</p><div class="stats"><div class="stat"><strong id="total-publishers">—</strong> 出版社・刊行元</div><div class="stat"><strong id="all-books">—</strong> 掲載書籍</div><div class="stat"><strong id="link-count">—</strong> 公式サイト案内</div></div></div><div class="abstract" aria-hidden="true"><i class="disk"></i><i class="slash"></i></div></section>
+<div class="bar"><div class="search-block"><label class="filter-label" for="pub-query">出版社名・書名・掲載テーマ</label><input id="pub-query" class="search" type="search" placeholder="例：Brepols / Reaktion / 博物誌" autocomplete="off"></div><div><label class="filter-label" for="sort">並び順</label><select class="select" id="sort"><option value="count">掲載冊数順</option><option value="az">A → Z</option><option value="za">Z → A</option></select></div><div><label class="filter-label" for="export-pubs">一覧を保存</label><button class="pill" id="export-pubs" type="button">出版社CSV ↓</button></div></div>
+<div class="section-intro"><div><h2>掲載出版社一覧</h2><p>当サイトの登録書籍を基に集計。主題はその出版社の掲載書籍から抽出しています。</p></div><div class="pillset" role="group" aria-label="出版社絞り込み"><button class="pill active" data-filter="all" aria-pressed="true">すべて</button><button class="pill" data-filter="catalog" aria-pressed="false">公式カタログあり</button><button class="pill" data-filter="official" aria-pressed="false">公式リンクあり</button><button class="pill" data-filter="multiple" aria-pressed="false">2冊以上</button></div></div>
+<div class="kicker"><span id="visible-count">—</span> PUBLISHERS</div>
+<div class="atlas-grid" id="publishers-grid"></div><div class="empty" id="no-results" hidden>該当する出版社がありません。検索条件を変更してください。</div>
+</main></div>
+<footer class="foot"><div class="wrap"><span>奇想洋書航路 — 出版社アトラス</span><a href="index.html">月別の本棚に戻る ↗</a></div></footer>
+</body></html>
