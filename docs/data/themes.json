@@ -1,0 +1,102 @@
+{
+  "themes": [
+    {
+      "id": "wunder",
+      "name": "驚異の部屋・蒐集",
+      "en": "Cabinets & Collecting",
+      "description": "ヴンダーカンマー、珍品、コレクション、博物館と物の配置。",
+      "accent": "#D79FAD"
+    },
+    {
+      "id": "grotesque",
+      "name": "変身・異形・グロテスク",
+      "en": "Metamorphosis & Grotesque",
+      "description": "マニエリスム、怪物、奇形、異種混淆、形態の変容。",
+      "accent": "#E9B486"
+    },
+    {
+      "id": "magic",
+      "name": "魔術・神秘・信仰",
+      "en": "Magic & Esotericism",
+      "description": "錬金術、占術、宗教的イメージ、霊媒、呪術と不可視の世界。",
+      "accent": "#AA9ACF"
+    },
+    {
+      "id": "nature",
+      "name": "博物誌・自然・動物",
+      "en": "Natural History & Beasts",
+      "description": "動植物、怪獣、博物誌、自然物の表象と人間との関係。",
+      "accent": "#B7C99B"
+    },
+    {
+      "id": "science",
+      "name": "科学史・知の装置",
+      "en": "Knowledge & Instruments",
+      "description": "初期近代科学、知識の機械、分類、模型、天文学と計測。",
+      "accent": "#9BBCC4"
+    },
+    {
+      "id": "optics",
+      "name": "光学・写真・視覚実験",
+      "en": "Optics & Vision",
+      "description": "光・影・色彩、錯視、写真、見ることの技術と哲学。",
+      "accent": "#F0C9A4"
+    },
+    {
+      "id": "books",
+      "name": "書物・図像・出版文化",
+      "en": "Books & Images",
+      "description": "エンブレム、写本、図解、書誌、活字、印刷と知の流通。",
+      "accent": "#C4AD99"
+    },
+    {
+      "id": "body",
+      "name": "身体・解剖・感覚",
+      "en": "Bodies & Senses",
+      "description": "蝋解剖、身振り、身体表象、感覚、死と医療の文化史。",
+      "accent": "#D9B1B7"
+    },
+    {
+      "id": "art",
+      "name": "絵画・装飾・美術史",
+      "en": "Art & Ornament",
+      "description": "美術史、絵画、装飾芸術、建築、造形と美学。",
+      "accent": "#A8C4C0"
+    },
+    {
+      "id": "spectacle",
+      "name": "見世物・舞台・遊戯",
+      "en": "Spectacle & Play",
+      "description": "祝祭、サーカス、宮廷文化、演劇、玩具、ゲーム、興行。",
+      "accent": "#E7C47A"
+    },
+    {
+      "id": "media",
+      "name": "映画・映像・メディア",
+      "en": "Cinema & Media",
+      "description": "映画、テレビ、電子芸術、デザインと技術文化。",
+      "accent": "#BAC3DC"
+    },
+    {
+      "id": "music",
+      "name": "音楽・音響・サブカルチャー",
+      "en": "Music & Counterculture",
+      "description": "音楽文化史、実験音楽、パンク、楽器、音響、アンダーグラウンド。",
+      "accent": "#D3B6CE"
+    },
+    {
+      "id": "surreal",
+      "name": "幻想・夢・シュルレアリスム",
+      "en": "Dreams & Surrealism",
+      "description": "シュルレアリスム、幻視、怪奇文学、妖精、奇想の芸術。",
+      "accent": "#B9B4E6"
+    },
+    {
+      "id": "society",
+      "name": "都市・社会・政治文化",
+      "en": "Society & Politics",
+      "description": "都市と制度、社会史、政治的図像、差異、周縁文化。",
+      "accent": "#B9C0A1"
+    }
+  ]
+}
