@@ -533,8 +533,47 @@ const motifSvg=(themeId)=>`<svg class="genre-svg" xmlns="http://www.w3.org/2000/
  renderFeature();render();
 });
 </script>
+
+<!-- Book-ocean side illustrations: kept outside the content column -->
+<style id="book-ocean-side-art">
+/* Decorative only: the catalog, Excel data, ISBNs and search are unchanged. */
+.curio-book-ocean-side {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: max(0px, calc((100vw - 1330px) / 2));
+  z-index: 0;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: .82;
+  filter: saturate(.83) brightness(.88);
+}
+.curio-book-ocean-side--left {
+  left: 0;
+  background-image: url("assets/book-ocean-left.webp");
+  background-position: 53% center;
+  -webkit-mask-image: linear-gradient(to right, #000 0%, #000 72%, transparent 100%);
+  mask-image: linear-gradient(to right, #000 0%, #000 72%, transparent 100%);
+}
+.curio-book-ocean-side--right {
+  right: 0;
+  background-image: url("assets/book-ocean-right.webp");
+  background-position: 49% center;
+  -webkit-mask-image: linear-gradient(to left, #000 0%, #000 72%, transparent 100%);
+  mask-image: linear-gradient(to left, #000 0%, #000 72%, transparent 100%);
+}
+body > .wrap, body > .foot {position: relative; z-index: 1;}
+/* Hide on narrower screens: never obscure text or reduce the reading column. */
+@media (max-width: 1499px) {
+  .curio-book-ocean-side {display: none;}
+}
+@media print {.curio-book-ocean-side {display:none;}}
+</style>
 </head>
 <body>
+<div class="curio-book-ocean-side curio-book-ocean-side--left" aria-hidden="true"></div>
+<div class="curio-book-ocean-side curio-book-ocean-side--right" aria-hidden="true"></div>
 <div class="wrap">
 <header class="masthead"><a href="#top" class="brand"><span class="brand-mark" aria-hidden="true"></span><span class="brand-name">奇想洋書航路<small>CURIO BOOK ATLAS</small></span></a><nav class="masthead-right" aria-label="ページ内の案内"><span>2026—2027年</span><a href="#catalog">刊行月から探す</a><a href="#themes">14のテーマ</a><button id="export-csv" class="csv-export" type="button" title="表示中の書籍をCSVでダウンロード" aria-label="表示中の書籍をCSVでダウンロード"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false"><path d="M12 3v11m-4-4 4 4 4-4M4 17v3h16v-3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter"/></svg>CSV抽出</button></nav></header>
 <main id="top">
