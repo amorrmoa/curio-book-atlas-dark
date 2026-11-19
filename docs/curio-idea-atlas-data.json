@@ -2,20 +2,20 @@
   "meta": {
     "books": 190,
     "concepts": 93,
-    "method": "preview",
-    "layout": "lexical-theme-preview",
-    "model": "tfidf-spectral (preview only)",
+    "method": "semantic",
+    "layout": "multilingual-semantic-umap",
+    "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
     "map_version": 3,
     "seed": 42,
-    "source": "curio_idea_atlas_seed.xlsx",
-    "edges": 138
+    "source": "curio_catalog.xlsx",
+    "edges": 199
   },
   "concepts": [
     {
       "id": "music",
       "label": "Music",
-      "x": 924.1,
-      "y": 293.5,
+      "x": 655.0,
+      "y": 450.0,
       "count": 9,
       "color": "#a4d9ed",
       "major": true,
@@ -35,8 +35,8 @@
     {
       "id": "imagination",
       "label": "Imagination",
-      "x": 664.4,
-      "y": 457.3,
+      "x": 768.4,
+      "y": 554.6,
       "count": 5,
       "color": "#d2e8b8",
       "major": true,
@@ -52,8 +52,8 @@
     {
       "id": "body",
       "label": "Body",
-      "x": 600.1,
-      "y": 532.6,
+      "x": 938.8,
+      "y": 544.7,
       "count": 5,
       "color": "#d8d1f6",
       "major": true,
@@ -69,8 +69,8 @@
     {
       "id": "creature",
       "label": "Creature",
-      "x": 875.2,
-      "y": 214.3,
+      "x": 812.5,
+      "y": 678.4,
       "count": 4,
       "color": "#ffcbd9",
       "major": true,
@@ -85,8 +85,8 @@
     {
       "id": "machine",
       "label": "Machine",
-      "x": 569.9,
-      "y": 436.0,
+      "x": 933.4,
+      "y": 359.5,
       "count": 4,
       "color": "#f0bfc9",
       "major": true,
@@ -101,8 +101,8 @@
     {
       "id": "material",
       "label": "Material",
-      "x": 666.8,
-      "y": 374.3,
+      "x": 882.7,
+      "y": 332.0,
       "count": 4,
       "color": "#c7ecf5",
       "major": true,
@@ -117,8 +117,8 @@
     {
       "id": "painting",
       "label": "Painting",
-      "x": 760.8,
-      "y": 347.9,
+      "x": 939.2,
+      "y": 413.7,
       "count": 4,
       "color": "#c9d8f7",
       "major": true,
@@ -133,8 +133,8 @@
     {
       "id": "renaissance",
       "label": "Renaissance",
-      "x": 651.6,
-      "y": 560.1,
+      "x": 979.6,
+      "y": 189.1,
       "count": 5,
       "color": "#f5ddae",
       "major": true,
@@ -150,8 +150,8 @@
     {
       "id": "black",
       "label": "Black",
-      "x": 739.3,
-      "y": 318.6,
+      "x": 794.6,
+      "y": 420.9,
       "count": 5,
       "color": "#d2e8b8",
       "major": true,
@@ -167,8 +167,8 @@
     {
       "id": "science",
       "label": "Science",
-      "x": 760.7,
-      "y": 586.6,
+      "x": 853.6,
+      "y": 514.0,
       "count": 5,
       "color": "#c7ecf5",
       "major": true,
@@ -184,8 +184,8 @@
     {
       "id": "literature",
       "label": "Literature",
-      "x": 665.1,
-      "y": 427.8,
+      "x": 734.2,
+      "y": 472.3,
       "count": 3,
       "color": "#c8d5ff",
       "major": true,
@@ -199,8 +199,8 @@
     {
       "id": "photography",
       "label": "Photography",
-      "x": 1083.6,
-      "y": 215.4,
+      "x": 1002.3,
+      "y": 517.8,
       "count": 3,
       "color": "#c7ecf5",
       "major": true,
@@ -214,8 +214,8 @@
     {
       "id": "supernatural",
       "label": "Supernatural",
-      "x": 797.5,
-      "y": 455.5,
+      "x": 951.4,
+      "y": 707.7,
       "count": 3,
       "color": "#f5ddae",
       "major": true,
@@ -229,8 +229,8 @@
     {
       "id": "beast",
       "label": "Beast",
-      "x": 1210.6,
-      "y": 755.7,
+      "x": 788.6,
+      "y": 734.4,
       "count": 3,
       "color": "#c8d5ff",
       "major": true,
@@ -244,8 +244,8 @@
     {
       "id": "shadow",
       "label": "Shadow",
-      "x": 1220.0,
-      "y": 238.8,
+      "x": 997.9,
+      "y": 676.5,
       "count": 3,
       "color": "#c7ecf5",
       "major": true,
@@ -259,8 +259,8 @@
     {
       "id": "18th century",
       "label": "18th Century",
-      "x": 909.8,
-      "y": 423.1,
+      "x": 942.4,
+      "y": 244.0,
       "count": 4,
       "color": "#d2e8b8",
       "major": true,
@@ -275,8 +275,8 @@
     {
       "id": "american",
       "label": "American",
-      "x": 642.6,
-      "y": 241.2,
+      "x": 746.3,
+      "y": 162.0,
       "count": 4,
       "color": "#c7ecf5",
       "major": true,
@@ -291,8 +291,8 @@
     {
       "id": "court",
       "label": "Court",
-      "x": 860.1,
-      "y": 320.8,
+      "x": 878.0,
+      "y": 199.0,
       "count": 4,
       "color": "#c7ecf5",
       "major": true,
@@ -307,8 +307,8 @@
     {
       "id": "design",
       "label": "Design",
-      "x": 812.8,
-      "y": 560.1,
+      "x": 879.8,
+      "y": 440.0,
       "count": 4,
       "color": "#f5ddae",
       "major": true,
@@ -323,8 +323,8 @@
     {
       "id": "image",
       "label": "Image",
-      "x": 751.4,
-      "y": 653.5,
+      "x": 1020.7,
+      "y": 385.6,
       "count": 4,
       "color": "#bce7dc",
       "major": true,
@@ -339,8 +339,8 @@
     {
       "id": "medieval",
       "label": "Medieval",
-      "x": 653.9,
-      "y": 597.8,
+      "x": 1014.3,
+      "y": 215.6,
       "count": 4,
       "color": "#f5ddae",
       "major": true,
@@ -355,8 +355,8 @@
     {
       "id": "object",
       "label": "Object",
-      "x": 979.0,
-      "y": 189.7,
+      "x": 853.4,
+      "y": 305.1,
       "count": 4,
       "color": "#c9d8f7",
       "major": true,
@@ -371,8 +371,8 @@
     {
       "id": "collection",
       "label": "Collection",
-      "x": 834.0,
-      "y": 460.5,
+      "x": 805.2,
+      "y": 471.1,
       "count": 2,
       "color": "#c7ecf5",
       "major": false,
@@ -385,8 +385,8 @@
     {
       "id": "imaginary",
       "label": "Imaginary",
-      "x": 717.3,
-      "y": 520.7,
+      "x": 770.1,
+      "y": 405.1,
       "count": 2,
       "color": "#bce7dc",
       "major": false,
@@ -399,8 +399,8 @@
     {
       "id": "instrument",
       "label": "Instrument",
-      "x": 858.3,
-      "y": 426.6,
+      "x": 641.7,
+      "y": 399.8,
       "count": 2,
       "color": "#a4d9ed",
       "major": false,
@@ -413,8 +413,8 @@
     {
       "id": "surrealist",
       "label": "Surrealist",
-      "x": 1220.0,
-      "y": 755.7,
+      "x": 889.2,
+      "y": 681.9,
       "count": 2,
       "color": "#c7ecf5",
       "major": false,
@@ -427,8 +427,8 @@
     {
       "id": "cabinet",
       "label": "Cabinet",
-      "x": 791.8,
-      "y": 554.8,
+      "x": 823.1,
+      "y": 493.2,
       "count": 2,
       "color": "#c7ecf5",
       "major": false,
@@ -441,8 +441,8 @@
     {
       "id": "diagram",
       "label": "Diagram",
-      "x": 747.1,
-      "y": 527.3,
+      "x": 943.8,
+      "y": 432.3,
       "count": 2,
       "color": "#bce7dc",
       "major": false,
@@ -455,8 +455,8 @@
     {
       "id": "ecology",
       "label": "Ecology",
-      "x": 819.0,
-      "y": 447.9,
+      "x": 751.4,
+      "y": 647.9,
       "count": 2,
       "color": "#a4d9ed",
       "major": false,
@@ -469,8 +469,8 @@
     {
       "id": "library",
       "label": "Library",
-      "x": 768.5,
-      "y": 594.1,
+      "x": 779.5,
+      "y": 478.3,
       "count": 2,
       "color": "#bce7dc",
       "major": false,
@@ -483,8 +483,8 @@
     {
       "id": "magic",
       "label": "Magic",
-      "x": 585.8,
-      "y": 625.3,
+      "x": 897.5,
+      "y": 736.4,
       "count": 2,
       "color": "#f5ddae",
       "major": true,
@@ -497,8 +497,8 @@
     {
       "id": "monster",
       "label": "Monster",
-      "x": 799.6,
-      "y": 458.9,
+      "x": 815.5,
+      "y": 716.5,
       "count": 2,
       "color": "#ffcbd9",
       "major": false,
@@ -511,8 +511,8 @@
     {
       "id": "museum",
       "label": "Museum",
-      "x": 780.7,
-      "y": 306.0,
+      "x": 830.1,
+      "y": 430.5,
       "count": 2,
       "color": "#a4d9ed",
       "major": false,
@@ -525,8 +525,8 @@
     {
       "id": "nature",
       "label": "Nature",
-      "x": 711.7,
-      "y": 213.9,
+      "x": 732.6,
+      "y": 635.3,
       "count": 2,
       "color": "#c8d5ff",
       "major": false,
@@ -539,8 +539,8 @@
     {
       "id": "phantom",
       "label": "Phantom",
-      "x": 869.2,
-      "y": 600.8,
+      "x": 997.9,
+      "y": 668.0,
       "count": 2,
       "color": "#d8d1f6",
       "major": false,
@@ -553,8 +553,8 @@
     {
       "id": "spirit",
       "label": "Spirit",
-      "x": 992.2,
-      "y": 241.2,
+      "x": 984.4,
+      "y": 722.1,
       "count": 2,
       "color": "#f5ddae",
       "major": false,
@@ -567,8 +567,8 @@
     {
       "id": "america",
       "label": "America",
-      "x": 608.0,
-      "y": 268.1,
+      "x": 701.4,
+      "y": 188.8,
       "count": 3,
       "color": "#f0bfc9",
       "major": true,
@@ -582,8 +582,8 @@
     {
       "id": "italy",
       "label": "Italy",
-      "x": 594.0,
-      "y": 401.4,
+      "x": 925.1,
+      "y": 162.0,
       "count": 3,
       "color": "#c7ecf5",
       "major": true,
@@ -597,8 +597,8 @@
     {
       "id": "literary",
       "label": "Literary",
-      "x": 664.2,
-      "y": 626.1,
+      "x": 693.9,
+      "y": 393.3,
       "count": 3,
       "color": "#bce7dc",
       "major": true,
@@ -612,8 +612,8 @@
     {
       "id": "lost",
       "label": "Lost",
-      "x": 1170.4,
-      "y": 187.9,
+      "x": 628.0,
+      "y": 367.8,
       "count": 3,
       "color": "#a4d9ed",
       "major": true,
@@ -627,8 +627,8 @@
     {
       "id": "curiosity",
       "label": "Curiosity",
-      "x": 873.2,
-      "y": 498.0,
+      "x": 834.1,
+      "y": 517.3,
       "count": 1,
       "color": "#c7ecf5",
       "major": false,
@@ -640,8 +640,8 @@
     {
       "id": "decorative",
       "label": "Decorative",
-      "x": 891.9,
-      "y": 324.1,
+      "x": 947.2,
+      "y": 289.2,
       "count": 1,
       "color": "#c9d8f7",
       "major": false,
@@ -653,8 +653,8 @@
     {
       "id": "miniature",
       "label": "Miniature",
-      "x": 639.0,
-      "y": 199.2,
+      "x": 793.4,
+      "y": 275.1,
       "count": 1,
       "color": "#c7ecf5",
       "major": false,
@@ -666,8 +666,8 @@
     {
       "id": "surrealism",
       "label": "Surrealism",
-      "x": 1178.3,
-      "y": 755.7,
+      "x": 881.7,
+      "y": 660.7,
       "count": 1,
       "color": "#c7ecf5",
       "major": false,
@@ -679,8 +679,8 @@
     {
       "id": "cinema",
       "label": "Cinema",
-      "x": 703.3,
-      "y": 403.9,
+      "x": 997.9,
+      "y": 488.4,
       "count": 1,
       "color": "#f0bfc9",
       "major": false,
@@ -692,8 +692,8 @@
     {
       "id": "death",
       "label": "Death",
-      "x": 776.3,
-      "y": 449.9,
+      "x": 895.8,
+      "y": 593.7,
       "count": 1,
       "color": "#d8d1f6",
       "major": false,
@@ -705,8 +705,8 @@
     {
       "id": "emblem",
       "label": "Emblem",
-      "x": 795.9,
-      "y": 612.6,
+      "x": 978.2,
+      "y": 292.2,
       "count": 1,
       "color": "#bce7dc",
       "major": false,
@@ -718,8 +718,8 @@
     {
       "id": "fashion",
       "label": "Fashion",
-      "x": 677.9,
-      "y": 424.3,
+      "x": 997.9,
+      "y": 432.3,
       "count": 1,
       "color": "#f0bfc9",
       "major": false,
@@ -731,8 +731,8 @@
     {
       "id": "garden",
       "label": "Garden",
-      "x": 950.2,
-      "y": 557.5,
+      "x": 734.6,
+      "y": 667.3,
       "count": 1,
       "color": "#c8d5ff",
       "major": false,
@@ -744,8 +744,8 @@
     {
       "id": "ghost",
       "label": "Ghost",
-      "x": 1220.0,
-      "y": 196.9,
+      "x": 997.4,
+      "y": 707.9,
       "count": 1,
       "color": "#c7ecf5",
       "major": false,
@@ -757,8 +757,8 @@
     {
       "id": "medicine",
       "label": "Medicine",
-      "x": 772.7,
-      "y": 483.5,
+      "x": 886.2,
+      "y": 545.4,
       "count": 1,
       "color": "#d8d1f6",
       "major": false,
@@ -770,8 +770,8 @@
     {
       "id": "sound",
       "label": "Sound",
-      "x": 1218.9,
-      "y": 196.9,
+      "x": 641.7,
+      "y": 402.5,
       "count": 1,
       "color": "#a4d9ed",
       "major": false,
@@ -783,8 +783,8 @@
     {
       "id": "wax",
       "label": "Wax / Ceroplastics",
-      "x": 785.8,
-      "y": 360.9,
+      "x": 931.7,
+      "y": 492.0,
       "count": 1,
       "color": "#d8d1f6",
       "major": false,
@@ -796,8 +796,8 @@
     {
       "id": "afterlife",
       "label": "Afterlife",
-      "x": 735.9,
-      "y": 574.7,
+      "x": 934.4,
+      "y": 663.0,
       "count": 2,
       "color": "#f5ddae",
       "major": false,
@@ -810,8 +810,8 @@
     {
       "id": "architect",
       "label": "Architect",
-      "x": 939.7,
-      "y": 258.4,
+      "x": 870.4,
+      "y": 423.8,
       "count": 2,
       "color": "#c9d8f7",
       "major": false,
@@ -824,8 +824,8 @@
     {
       "id": "impossible",
       "label": "Impossible",
-      "x": 757.9,
-      "y": 245.0,
+      "x": 746.6,
+      "y": 269.9,
       "count": 2,
       "color": "#c7ecf5",
       "major": false,
@@ -838,8 +838,8 @@
     {
       "id": "laboratory",
       "label": "Laboratory",
-      "x": 828.9,
-      "y": 491.6,
+      "x": 884.8,
+      "y": 506.3,
       "count": 2,
       "color": "#d8d1f6",
       "major": false,
@@ -852,8 +852,8 @@
     {
       "id": "performing",
       "label": "Performing",
-      "x": 722.0,
-      "y": 487.8,
+      "x": 837.6,
+      "y": 184.9,
       "count": 2,
       "color": "#c7ecf5",
       "major": false,
@@ -866,8 +866,8 @@
     {
       "id": "production",
       "label": "Production",
-      "x": 648.2,
-      "y": 712.3,
+      "x": 974.1,
+      "y": 362.7,
       "count": 2,
       "color": "#d8d1f6",
       "major": false,
@@ -880,8 +880,8 @@
     {
       "id": "underground",
       "label": "Underground",
-      "x": 1220.0,
-      "y": 315.2,
+      "x": 650.7,
+      "y": 315.5,
       "count": 2,
       "color": "#a4d9ed",
       "major": false,
@@ -894,8 +894,8 @@
     {
       "id": "visionary",
       "label": "Visionary",
-      "x": 1220.0,
-      "y": 604.0,
+      "x": 831.2,
+      "y": 373.2,
       "count": 2,
       "color": "#c9d8f7",
       "major": false,
@@ -908,8 +908,8 @@
     {
       "id": "animal",
       "label": "Animal",
-      "x": 913.5,
-      "y": 530.1,
+      "x": 735.2,
+      "y": 706.4,
       "count": 2,
       "color": "#c8d5ff",
       "major": true,
@@ -922,8 +922,8 @@
     {
       "id": "artist",
       "label": "Artist",
-      "x": 1220.0,
-      "y": 526.8,
+      "x": 854.2,
+      "y": 387.8,
       "count": 2,
       "color": "#c9d8f7",
       "major": true,
@@ -936,8 +936,8 @@
     {
       "id": "band",
       "label": "Band",
-      "x": 857.3,
-      "y": 499.7,
+      "x": 612.0,
+      "y": 395.5,
       "count": 2,
       "color": "#a4d9ed",
       "major": true,
@@ -950,8 +950,8 @@
     {
       "id": "baroque",
       "label": "Baroque",
-      "x": 766.7,
-      "y": 565.7,
+      "x": 934.5,
+      "y": 218.3,
       "count": 2,
       "color": "#c7ecf5",
       "major": false,
@@ -964,8 +964,8 @@
     {
       "id": "block",
       "label": "Block",
-      "x": 728.5,
-      "y": 214.4,
+      "x": 779.2,
+      "y": 220.2,
       "count": 2,
       "color": "#c7ecf5",
       "major": true,
@@ -978,8 +978,8 @@
     {
       "id": "city",
       "label": "City",
-      "x": 1054.1,
-      "y": 494.8,
+      "x": 686.9,
+      "y": 339.1,
       "count": 2,
       "color": "#d2e8b8",
       "major": true,
@@ -992,8 +992,8 @@
     {
       "id": "critical",
       "label": "Critical",
-      "x": 764.8,
-      "y": 400.2,
+      "x": 709.8,
+      "y": 429.5,
       "count": 2,
       "color": "#bce7dc",
       "major": false,
@@ -1006,8 +1006,8 @@
     {
       "id": "divine",
       "label": "Divine",
-      "x": 632.6,
-      "y": 755.8,
+      "x": 953.3,
+      "y": 722.1,
       "count": 2,
       "color": "#f5ddae",
       "major": false,
@@ -1020,8 +1020,8 @@
     {
       "id": "film",
       "label": "Film",
-      "x": 632.5,
-      "y": 313.2,
+      "x": 997.9,
+      "y": 463.4,
       "count": 2,
       "color": "#f0bfc9",
       "major": true,
@@ -1034,8 +1034,8 @@
     {
       "id": "france",
       "label": "France",
-      "x": 833.8,
-      "y": 637.8,
+      "x": 962.0,
+      "y": 162.1,
       "count": 2,
       "color": "#c7ecf5",
       "major": false,
@@ -1048,8 +1048,8 @@
     {
       "id": "french",
       "label": "French",
-      "x": 1220.0,
-      "y": 558.4,
+      "x": 995.0,
+      "y": 162.1,
       "count": 2,
       "color": "#c9d8f7",
       "major": false,
@@ -1062,8 +1062,8 @@
     {
       "id": "future",
       "label": "Future",
-      "x": 1014.8,
-      "y": 197.0,
+      "x": 679.9,
+      "y": 498.8,
       "count": 2,
       "color": "#f0bfc9",
       "major": false,
@@ -1076,8 +1076,8 @@
     {
       "id": "home",
       "label": "Home",
-      "x": 898.2,
-      "y": 187.0,
+      "x": 682.3,
+      "y": 499.1,
       "count": 2,
       "color": "#c7ecf5",
       "major": true,
@@ -1090,8 +1090,8 @@
     {
       "id": "human",
       "label": "Human",
-      "x": 594.3,
-      "y": 483.6,
+      "x": 844.8,
+      "y": 581.2,
       "count": 2,
       "color": "#d8d1f6",
       "major": true,
@@ -1104,8 +1104,8 @@
     {
       "id": "latin",
       "label": "Latin",
-      "x": 650.0,
-      "y": 195.1,
+      "x": 824.9,
+      "y": 133.4,
       "count": 2,
       "color": "#f0bfc9",
       "major": true,
@@ -1118,8 +1118,8 @@
     {
       "id": "licorne",
       "label": "Licorne",
-      "x": 754.5,
-      "y": 628.6,
+      "x": 955.0,
+      "y": 162.1,
       "count": 2,
       "color": "#ffcbd9",
       "major": false,
@@ -1132,8 +1132,8 @@
     {
       "id": "magical",
       "label": "Magical",
-      "x": 652.5,
-      "y": 472.4,
+      "x": 929.2,
+      "y": 722.1,
       "count": 2,
       "color": "#f5ddae",
       "major": false,
@@ -1146,8 +1146,8 @@
     {
       "id": "myth",
       "label": "Myth",
-      "x": 769.6,
-      "y": 400.8,
+      "x": 785.5,
+      "y": 608.0,
       "count": 2,
       "color": "#ffcbd9",
       "major": true,
@@ -1160,8 +1160,8 @@
     {
       "id": "play",
       "label": "Play",
-      "x": 712.4,
-      "y": 279.6,
+      "x": 813.8,
+      "y": 190.0,
       "count": 2,
       "color": "#c7ecf5",
       "major": true,
@@ -1174,8 +1174,8 @@
     {
       "id": "poetic",
       "label": "Poetic",
-      "x": 726.8,
-      "y": 304.2,
+      "x": 725.1,
+      "y": 375.8,
       "count": 2,
       "color": "#d8d1f6",
       "major": false,
@@ -1188,8 +1188,8 @@
     {
       "id": "politic",
       "label": "Politic",
-      "x": 696.6,
-      "y": 249.0,
+      "x": 774.7,
+      "y": 162.1,
       "count": 2,
       "color": "#c7ecf5",
       "major": false,
@@ -1202,8 +1202,8 @@
     {
       "id": "presence",
       "label": "Presence",
-      "x": 632.6,
-      "y": 755.8,
+      "x": 972.6,
+      "y": 722.1,
       "count": 2,
       "color": "#f5ddae",
       "major": false,
@@ -1216,8 +1216,8 @@
     {
       "id": "punk",
       "label": "Punk",
-      "x": 965.2,
-      "y": 241.1,
+      "x": 615.5,
+      "y": 479.0,
       "count": 2,
       "color": "#a4d9ed",
       "major": true,
@@ -1230,8 +1230,8 @@
     {
       "id": "scale",
       "label": "Scale",
-      "x": 667.3,
-      "y": 508.9,
+      "x": 740.5,
+      "y": 528.3,
       "count": 2,
       "color": "#d2e8b8",
       "major": true,
@@ -1244,8 +1244,8 @@
     {
       "id": "strange",
       "label": "Strange",
-      "x": 1165.3,
-      "y": 755.7,
+      "x": 858.5,
+      "y": 705.3,
       "count": 2,
       "color": "#c7ecf5",
       "major": false,
@@ -1258,8 +1258,8 @@
     {
       "id": "tales",
       "label": "Tales",
-      "x": 741.1,
-      "y": 533.1,
+      "x": 673.7,
+      "y": 422.8,
       "count": 2,
       "color": "#a4d9ed",
       "major": true,
@@ -1272,8 +1272,8 @@
     {
       "id": "trade",
       "label": "Trade",
-      "x": 901.3,
-      "y": 620.3,
+      "x": 857.6,
+      "y": 227.1,
       "count": 2,
       "color": "#d2e8b8",
       "major": true,
@@ -1286,8 +1286,8 @@
     {
       "id": "turning",
       "label": "Turning",
-      "x": 706.4,
-      "y": 271.8,
+      "x": 759.3,
+      "y": 353.5,
       "count": 2,
       "color": "#d8d1f6",
       "major": false,
@@ -1300,8 +1300,8 @@
     {
       "id": "value",
       "label": "Value",
-      "x": 740.6,
-      "y": 487.2,
+      "x": 861.1,
+      "y": 263.7,
       "count": 2,
       "color": "#f0bfc9",
       "major": true,
@@ -1314,8 +1314,8 @@
     {
       "id": "vision",
       "label": "Vision",
-      "x": 1220.0,
-      "y": 755.7,
+      "x": 955.2,
+      "y": 627.0,
       "count": 2,
       "color": "#c7ecf5",
       "major": false,
@@ -1328,8 +1328,8 @@
     {
       "id": "weather",
       "label": "Weather",
-      "x": 740.2,
-      "y": 571.0,
+      "x": 709.5,
+      "y": 591.4,
       "count": 2,
       "color": "#c8d5ff",
       "major": false,
@@ -1342,8 +1342,8 @@
     {
       "id": "york",
       "label": "York",
-      "x": 1220.0,
-      "y": 457.4,
+      "x": 679.9,
+      "y": 299.9,
       "count": 2,
       "color": "#a4d9ed",
       "major": true,
@@ -1357,1107 +1357,1595 @@
   "edges": [
     {
       "a": "music",
-      "b": "museum",
-      "weight": 0.4,
-      "similarity": 0.3807,
-      "sharedBooks": 1,
+      "b": "black",
+      "weight": 0.551,
+      "similarity": 0.5125,
+      "sharedBooks": 2,
       "relation": "shared-books"
     },
     {
       "a": "music",
-      "b": "sound",
-      "weight": 0.342,
-      "similarity": 0.3116,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "music",
-      "b": "visionary",
-      "weight": 0.337,
-      "similarity": 0.3051,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "imagination",
-      "b": "image",
-      "weight": 0.308,
-      "similarity": 0.3668,
-      "sharedBooks": 0,
-      "relation": "semantic"
-    },
-    {
-      "a": "imagination",
-      "b": "imaginary",
-      "weight": 0.52,
-      "similarity": 0.6188,
-      "sharedBooks": 0,
-      "relation": "semantic"
-    },
-    {
-      "a": "imagination",
-      "b": "america",
-      "weight": 0.465,
-      "similarity": 0.41,
-      "sharedBooks": 2,
-      "relation": "shared-books"
-    },
-    {
-      "a": "imagination",
-      "b": "scale",
-      "weight": 0.392,
-      "similarity": 0.3713,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "body",
-      "b": "literary",
-      "weight": 0.404,
-      "similarity": 0.3378,
-      "sharedBooks": 2,
-      "relation": "shared-books"
-    },
-    {
-      "a": "body",
-      "b": "film",
-      "weight": 0.536,
-      "similarity": 0.5425,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "creature",
-      "b": "nature",
-      "weight": 0.418,
-      "similarity": 0.4981,
-      "sharedBooks": 0,
-      "relation": "semantic"
-    },
-    {
-      "a": "creature",
-      "b": "miniature",
-      "weight": 0.416,
-      "similarity": 0.4947,
-      "sharedBooks": 0,
-      "relation": "semantic"
-    },
-    {
-      "a": "creature",
-      "b": "myth",
-      "weight": 0.471,
-      "similarity": 0.4647,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "machine",
-      "b": "spirit",
-      "weight": 0.339,
-      "similarity": 0.3073,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "machine",
-      "b": "fashion",
-      "weight": 0.596,
-      "similarity": 0.614,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "machine",
-      "b": "film",
-      "weight": 0.353,
-      "similarity": 0.3247,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "material",
-      "b": "design",
-      "weight": 0.225,
-      "similarity": 0.1723,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "material",
-      "b": "nature",
-      "weight": 0.389,
-      "similarity": 0.3668,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "material",
-      "b": "afterlife",
-      "weight": 0.091,
-      "similarity": 0.1087,
-      "sharedBooks": 0,
-      "relation": "semantic"
-    },
-    {
-      "a": "painting",
-      "b": "death",
-      "weight": 0.439,
-      "similarity": 0.4269,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "renaissance",
-      "b": "ecology",
-      "weight": 0.289,
-      "similarity": 0.2481,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "renaissance",
-      "b": "italy",
-      "weight": 0.429,
-      "similarity": 0.3674,
-      "sharedBooks": 2,
-      "relation": "shared-books"
-    },
-    {
-      "a": "renaissance",
-      "b": "play",
-      "weight": 0.333,
-      "similarity": 0.3006,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "black",
-      "b": "museum",
-      "weight": 0.33,
-      "similarity": 0.2966,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "black",
-      "b": "architect",
-      "weight": 0.328,
-      "similarity": 0.2949,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "black",
-      "b": "block",
-      "weight": 0.378,
-      "similarity": 0.45,
-      "sharedBooks": 0,
-      "relation": "semantic"
-    },
-    {
-      "a": "science",
-      "b": "diagram",
-      "weight": 0.326,
-      "similarity": 0.2924,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "science",
-      "b": "performing",
-      "weight": 0.374,
-      "similarity": 0.349,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "literature",
-      "b": "italy",
-      "weight": 0.38,
-      "similarity": 0.3566,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "literature",
-      "b": "literary",
-      "weight": 0.459,
-      "similarity": 0.5462,
-      "sharedBooks": 0,
-      "relation": "semantic"
-    },
-    {
-      "a": "literature",
-      "b": "critical",
-      "weight": 0.348,
-      "similarity": 0.3181,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "literature",
-      "b": "human",
-      "weight": 0.438,
-      "similarity": 0.4258,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "literature",
-      "b": "myth",
-      "weight": 0.371,
-      "similarity": 0.3452,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "photography",
-      "b": "shadow",
-      "weight": 0.282,
-      "similarity": 0.2401,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "photography",
-      "b": "spirit",
-      "weight": 0.33,
-      "similarity": 0.2975,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "photography",
-      "b": "ghost",
-      "weight": 0.51,
-      "similarity": 0.511,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "supernatural",
-      "b": "spirit",
-      "weight": 0.413,
-      "similarity": 0.3957,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "supernatural",
-      "b": "tales",
-      "weight": 0.507,
-      "similarity": 0.508,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "beast",
-      "b": "surrealist",
-      "weight": 0.412,
-      "similarity": 0.3946,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "beast",
-      "b": "animal",
-      "weight": 0.448,
-      "similarity": 0.438,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "beast",
-      "b": "strange",
-      "weight": 0.362,
-      "similarity": 0.3351,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "shadow",
-      "b": "object",
-      "weight": 0.402,
-      "similarity": 0.3822,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "shadow",
-      "b": "spirit",
-      "weight": 0.379,
-      "similarity": 0.3548,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "shadow",
-      "b": "ghost",
-      "weight": 0.46,
-      "similarity": 0.4516,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "shadow",
-      "b": "french",
-      "weight": 0.401,
-      "similarity": 0.3819,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "18th century",
-      "b": "decorative",
-      "weight": 0.422,
-      "similarity": 0.4069,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "18th century",
-      "b": "city",
-      "weight": 0.452,
-      "similarity": 0.4428,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "18th century",
-      "b": "french",
-      "weight": 0.371,
-      "similarity": 0.3463,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "18th century",
-      "b": "home",
-      "weight": 0.325,
-      "similarity": 0.2905,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "american",
-      "b": "america",
-      "weight": 0.821,
-      "similarity": 0.8813,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "american",
-      "b": "miniature",
-      "weight": 0.425,
-      "similarity": 0.4103,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "american",
-      "b": "fashion",
-      "weight": 0.441,
-      "similarity": 0.429,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "court",
-      "b": "object",
-      "weight": 0.448,
-      "similarity": 0.3903,
-      "sharedBooks": 2,
-      "relation": "shared-books"
-    },
-    {
-      "a": "court",
-      "b": "decorative",
-      "weight": 0.527,
-      "similarity": 0.5315,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "court",
-      "b": "baroque",
-      "weight": 0.37,
-      "similarity": 0.3451,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "court",
-      "b": "france",
-      "weight": 0.414,
-      "similarity": 0.3965,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "court",
-      "b": "poetic",
-      "weight": 0.386,
-      "similarity": 0.3632,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "court",
-      "b": "politic",
-      "weight": 0.39,
-      "similarity": 0.3686,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "image",
-      "b": "imaginary",
-      "weight": 0.337,
-      "similarity": 0.4006,
-      "sharedBooks": 0,
-      "relation": "semantic"
-    },
-    {
-      "a": "image",
-      "b": "production",
-      "weight": 0.309,
-      "similarity": 0.2725,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "image",
-      "b": "presence",
-      "weight": 0.285,
-      "similarity": 0.2429,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "medieval",
-      "b": "magic",
-      "weight": 0.627,
-      "similarity": 0.6034,
-      "sharedBooks": 2,
-      "relation": "shared-books"
-    },
-    {
-      "a": "medieval",
-      "b": "medicine",
-      "weight": 0.34,
-      "similarity": 0.4044,
-      "sharedBooks": 0,
-      "relation": "semantic"
-    },
-    {
-      "a": "medieval",
-      "b": "weather",
-      "weight": 0.352,
-      "similarity": 0.3235,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "object",
-      "b": "decorative",
-      "weight": 0.497,
-      "similarity": 0.4955,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "collection",
-      "b": "cabinet",
-      "weight": 0.542,
-      "similarity": 0.5492,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "collection",
-      "b": "curiosity",
-      "weight": 0.632,
-      "similarity": 0.656,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "collection",
-      "b": "home",
-      "weight": 0.365,
-      "similarity": 0.3385,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "imaginary",
       "b": "instrument",
-      "weight": 0.475,
-      "similarity": 0.4695,
+      "weight": 0.758,
+      "similarity": 0.8068,
       "sharedBooks": 1,
       "relation": "shared-books"
     },
     {
-      "a": "imaginary",
-      "b": "museum",
-      "weight": 0.492,
-      "similarity": 0.49,
+      "a": "music",
+      "b": "lost",
+      "weight": 0.594,
+      "similarity": 0.6109,
       "sharedBooks": 1,
       "relation": "shared-books"
     },
     {
-      "a": "imaginary",
-      "b": "scale",
-      "weight": 0.455,
-      "similarity": 0.4453,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "instrument",
-      "b": "ecology",
-      "weight": 0.531,
-      "similarity": 0.5363,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "instrument",
-      "b": "museum",
-      "weight": 0.6,
-      "similarity": 0.6184,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "surrealist",
-      "b": "surrealism",
-      "weight": 0.711,
-      "similarity": 0.8465,
-      "sharedBooks": 0,
-      "relation": "semantic"
-    },
-    {
-      "a": "surrealist",
-      "b": "strange",
-      "weight": 0.399,
-      "similarity": 0.3796,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "surrealist",
-      "b": "vision",
-      "weight": 0.345,
-      "similarity": 0.3154,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "cabinet",
-      "b": "curiosity",
-      "weight": 0.759,
-      "similarity": 0.808,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "cabinet",
-      "b": "france",
-      "weight": 0.433,
-      "similarity": 0.4197,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "cabinet",
-      "b": "licorne",
-      "weight": 0.445,
-      "similarity": 0.4343,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "diagram",
-      "b": "monster",
-      "weight": 0.159,
-      "similarity": 0.1892,
-      "sharedBooks": 0,
-      "relation": "semantic"
-    },
-    {
-      "a": "ecology",
-      "b": "italy",
-      "weight": 0.352,
-      "similarity": 0.3236,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "ecology",
-      "b": "myth",
-      "weight": 0.406,
-      "similarity": 0.3869,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "library",
-      "b": "literary",
-      "weight": 0.25,
-      "similarity": 0.2978,
-      "sharedBooks": 0,
-      "relation": "semantic"
-    },
-    {
-      "a": "magic",
-      "b": "magical",
-      "weight": 0.565,
-      "similarity": 0.6729,
-      "sharedBooks": 0,
-      "relation": "semantic"
-    },
-    {
-      "a": "magic",
-      "b": "weather",
-      "weight": 0.422,
-      "similarity": 0.4066,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "nature",
-      "b": "miniature",
-      "weight": 0.415,
-      "similarity": 0.4943,
-      "sharedBooks": 0,
-      "relation": "semantic"
-    },
-    {
-      "a": "nature",
-      "b": "impossible",
-      "weight": 0.493,
-      "similarity": 0.4912,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "phantom",
-      "b": "wax",
-      "weight": 0.137,
-      "similarity": 0.1635,
-      "sharedBooks": 0,
-      "relation": "semantic"
-    },
-    {
-      "a": "spirit",
-      "b": "ghost",
-      "weight": 0.54,
-      "similarity": 0.5472,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "america",
-      "b": "latin",
-      "weight": 0.458,
-      "similarity": 0.4488,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "italy",
-      "b": "play",
-      "weight": 0.455,
-      "similarity": 0.4457,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "italy",
-      "b": "tales",
-      "weight": 0.295,
-      "similarity": 0.3514,
-      "sharedBooks": 0,
-      "relation": "semantic"
-    },
-    {
-      "a": "italy",
-      "b": "trade",
-      "weight": 0.235,
-      "similarity": 0.2801,
-      "sharedBooks": 0,
-      "relation": "semantic"
-    },
-    {
-      "a": "literary",
-      "b": "human",
-      "weight": 0.439,
-      "similarity": 0.4262,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "literary",
-      "b": "value",
-      "weight": 0.378,
-      "similarity": 0.3539,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "lost",
-      "b": "ghost",
-      "weight": 0.443,
-      "similarity": 0.5276,
-      "sharedBooks": 0,
-      "relation": "semantic"
-    },
-    {
-      "a": "lost",
+      "a": "music",
       "b": "sound",
+      "weight": 0.798,
+      "similarity": 0.8539,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "music",
+      "b": "band",
+      "weight": 0.676,
+      "similarity": 0.8045,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "music",
+      "b": "punk",
+      "weight": 0.507,
+      "similarity": 0.6039,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "imagination",
+      "b": "black",
+      "weight": 0.556,
+      "similarity": 0.5659,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "imagination",
+      "b": "american",
+      "weight": 0.625,
+      "similarity": 0.6486,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "imagination",
+      "b": "imaginary",
+      "weight": 0.712,
+      "similarity": 0.8475,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "imagination",
+      "b": "america",
+      "weight": 0.715,
+      "similarity": 0.7072,
+      "sharedBooks": 2,
+      "relation": "shared-books"
+    },
+    {
+      "a": "imagination",
+      "b": "curiosity",
+      "weight": 0.569,
+      "similarity": 0.677,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "imagination",
+      "b": "surrealism",
+      "weight": 0.642,
+      "similarity": 0.7638,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "imagination",
+      "b": "future",
+      "weight": 0.553,
+      "similarity": 0.6578,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "imagination",
+      "b": "human",
+      "weight": 0.718,
+      "similarity": 0.7589,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "imagination",
+      "b": "myth",
+      "weight": 0.769,
+      "similarity": 0.82,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "imagination",
+      "b": "scale",
+      "weight": 0.614,
+      "similarity": 0.6345,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "imagination",
+      "b": "vision",
+      "weight": 0.604,
+      "similarity": 0.7192,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "body",
+      "b": "literary",
+      "weight": 0.634,
+      "similarity": 0.6116,
+      "sharedBooks": 2,
+      "relation": "shared-books"
+    },
+    {
+      "a": "body",
+      "b": "death",
+      "weight": 0.489,
+      "similarity": 0.5825,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "body",
+      "b": "medicine",
+      "weight": 0.403,
+      "similarity": 0.4795,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "body",
+      "b": "wax",
+      "weight": 0.473,
+      "similarity": 0.5626,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "body",
+      "b": "film",
+      "weight": 0.602,
+      "similarity": 0.6208,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "body",
+      "b": "human",
+      "weight": 0.741,
+      "similarity": 0.7858,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "creature",
+      "b": "beast",
+      "weight": 0.755,
+      "similarity": 0.8991,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "creature",
+      "b": "monster",
+      "weight": 0.699,
+      "similarity": 0.8325,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "creature",
+      "b": "nature",
+      "weight": 0.603,
+      "similarity": 0.7173,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "creature",
+      "b": "spirit",
+      "weight": 0.625,
+      "similarity": 0.6484,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "creature",
+      "b": "animal",
+      "weight": 0.686,
+      "similarity": 0.8171,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "creature",
+      "b": "myth",
+      "weight": 0.719,
+      "similarity": 0.7599,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "creature",
+      "b": "strange",
+      "weight": 0.643,
+      "similarity": 0.7656,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "machine",
+      "b": "supernatural",
+      "weight": 0.503,
+      "similarity": 0.5033,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "machine",
+      "b": "fashion",
+      "weight": 0.527,
+      "similarity": 0.5312,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "machine",
+      "b": "film",
+      "weight": 0.527,
+      "similarity": 0.5317,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "material",
+      "b": "science",
       "weight": 0.631,
       "similarity": 0.6551,
       "sharedBooks": 1,
       "relation": "shared-books"
     },
     {
+      "a": "material",
+      "b": "design",
+      "weight": 0.653,
+      "similarity": 0.6816,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "material",
+      "b": "object",
+      "weight": 0.688,
+      "similarity": 0.7235,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "painting",
+      "b": "image",
+      "weight": 0.614,
+      "similarity": 0.7308,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "painting",
+      "b": "death",
+      "weight": 0.512,
+      "similarity": 0.5136,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "painting",
+      "b": "architect",
+      "weight": 0.55,
+      "similarity": 0.6542,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "painting",
+      "b": "visionary",
+      "weight": 0.599,
+      "similarity": 0.7128,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "painting",
+      "b": "artist",
+      "weight": 0.699,
+      "similarity": 0.8327,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "renaissance",
+      "b": "18th century",
+      "weight": 0.655,
+      "similarity": 0.7794,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "renaissance",
+      "b": "medieval",
+      "weight": 0.723,
+      "similarity": 0.8603,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "renaissance",
+      "b": "italy",
+      "weight": 0.674,
+      "similarity": 0.6587,
+      "sharedBooks": 2,
+      "relation": "shared-books"
+    },
+    {
+      "a": "renaissance",
+      "b": "baroque",
+      "weight": 0.686,
+      "similarity": 0.8163,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "renaissance",
+      "b": "myth",
+      "weight": 0.735,
+      "similarity": 0.7786,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "black",
+      "b": "museum",
+      "weight": 0.595,
+      "similarity": 0.6129,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "science",
+      "b": "design",
+      "weight": 0.585,
+      "similarity": 0.6009,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "science",
+      "b": "diagram",
+      "weight": 0.629,
+      "similarity": 0.6532,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "science",
+      "b": "laboratory",
+      "weight": 0.619,
+      "similarity": 0.737,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "literature",
+      "b": "imaginary",
+      "weight": 0.68,
+      "similarity": 0.8092,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "literature",
+      "b": "ecology",
+      "weight": 0.624,
+      "similarity": 0.6473,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "literature",
+      "b": "library",
+      "weight": 0.574,
+      "similarity": 0.6835,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "literature",
+      "b": "literary",
+      "weight": 0.76,
+      "similarity": 0.9051,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "literature",
+      "b": "critical",
+      "weight": 0.709,
+      "similarity": 0.7476,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "literature",
+      "b": "human",
+      "weight": 0.721,
+      "similarity": 0.7624,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "literature",
+      "b": "myth",
+      "weight": 0.735,
+      "similarity": 0.7797,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "literature",
+      "b": "poetic",
+      "weight": 0.615,
+      "similarity": 0.7318,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "literature",
+      "b": "scale",
+      "weight": 0.636,
+      "similarity": 0.6612,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "photography",
+      "b": "shadow",
+      "weight": 0.602,
+      "similarity": 0.6212,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "photography",
+      "b": "image",
+      "weight": 0.636,
+      "similarity": 0.757,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "photography",
+      "b": "vision",
+      "weight": 0.587,
+      "similarity": 0.699,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "supernatural",
+      "b": "magic",
+      "weight": 0.639,
+      "similarity": 0.7606,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "supernatural",
+      "b": "spirit",
+      "weight": 0.745,
+      "similarity": 0.7905,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "supernatural",
+      "b": "afterlife",
+      "weight": 0.476,
+      "similarity": 0.5662,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "supernatural",
+      "b": "divine",
+      "weight": 0.572,
+      "similarity": 0.6808,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "supernatural",
+      "b": "magical",
+      "weight": 0.719,
+      "similarity": 0.8557,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "supernatural",
+      "b": "tales",
+      "weight": 0.675,
+      "similarity": 0.7072,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "beast",
+      "b": "monster",
+      "weight": 0.674,
+      "similarity": 0.8027,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "beast",
+      "b": "garden",
+      "weight": 0.439,
+      "similarity": 0.5223,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "beast",
+      "b": "animal",
+      "weight": 0.821,
+      "similarity": 0.8815,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "beast",
+      "b": "strange",
+      "weight": 0.647,
+      "similarity": 0.6746,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "shadow",
+      "b": "phantom",
+      "weight": 0.55,
+      "similarity": 0.6553,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "shadow",
+      "b": "spirit",
+      "weight": 0.619,
+      "similarity": 0.6408,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "shadow",
+      "b": "ghost",
+      "weight": 0.748,
+      "similarity": 0.7944,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "18th century",
+      "b": "medieval",
+      "weight": 0.664,
+      "similarity": 0.791,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "18th century",
+      "b": "decorative",
+      "weight": 0.698,
+      "similarity": 0.735,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "18th century",
+      "b": "city",
+      "weight": 0.591,
+      "similarity": 0.6078,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "18th century",
+      "b": "home",
+      "weight": 0.549,
+      "similarity": 0.5573,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "18th century",
+      "b": "trade",
+      "weight": 0.462,
+      "similarity": 0.5501,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "american",
+      "b": "america",
+      "weight": 0.86,
+      "similarity": 0.9276,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "american",
+      "b": "fashion",
+      "weight": 0.583,
+      "similarity": 0.5984,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "american",
+      "b": "latin",
+      "weight": 0.636,
+      "similarity": 0.6609,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "court",
+      "b": "decorative",
+      "weight": 0.607,
+      "similarity": 0.6272,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "court",
+      "b": "performing",
+      "weight": 0.643,
+      "similarity": 0.6693,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "court",
+      "b": "baroque",
+      "weight": 0.627,
+      "similarity": 0.65,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "design",
+      "b": "wax",
+      "weight": 0.464,
+      "similarity": 0.5526,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "design",
+      "b": "architect",
+      "weight": 0.612,
+      "similarity": 0.7285,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "image",
+      "b": "imaginary",
+      "weight": 0.629,
+      "similarity": 0.7483,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "image",
+      "b": "diagram",
+      "weight": 0.609,
+      "similarity": 0.7254,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "image",
+      "b": "museum",
+      "weight": 0.603,
+      "similarity": 0.7183,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "image",
+      "b": "emblem",
+      "weight": 0.554,
+      "similarity": 0.6598,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "image",
+      "b": "production",
+      "weight": 0.616,
+      "similarity": 0.6376,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "image",
+      "b": "baroque",
+      "weight": 0.665,
+      "similarity": 0.6963,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "image",
+      "b": "presence",
+      "weight": 0.599,
+      "similarity": 0.6171,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "medieval",
+      "b": "magic",
+      "weight": 0.777,
+      "similarity": 0.7817,
+      "sharedBooks": 2,
+      "relation": "shared-books"
+    },
+    {
+      "a": "medieval",
+      "b": "weather",
+      "weight": 0.423,
+      "similarity": 0.4073,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "object",
+      "b": "imaginary",
+      "weight": 0.613,
+      "similarity": 0.7298,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "object",
+      "b": "decorative",
+      "weight": 0.647,
+      "similarity": 0.674,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "object",
+      "b": "miniature",
+      "weight": 0.585,
+      "similarity": 0.6962,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "collection",
+      "b": "cabinet",
+      "weight": 0.722,
+      "similarity": 0.7639,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "collection",
+      "b": "library",
+      "weight": 0.563,
+      "similarity": 0.6697,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "collection",
+      "b": "curiosity",
+      "weight": 0.757,
+      "similarity": 0.8052,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "collection",
+      "b": "home",
+      "weight": 0.565,
+      "similarity": 0.5771,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "imaginary",
+      "b": "diagram",
+      "weight": 0.6,
+      "similarity": 0.7141,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "imaginary",
+      "b": "museum",
+      "weight": 0.719,
+      "similarity": 0.7598,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "imaginary",
+      "b": "literary",
+      "weight": 0.668,
+      "similarity": 0.7953,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "imaginary",
+      "b": "surrealism",
+      "weight": 0.601,
+      "similarity": 0.7153,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "imaginary",
+      "b": "impossible",
+      "weight": 0.566,
+      "similarity": 0.6743,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "imaginary",
+      "b": "visionary",
+      "weight": 0.644,
+      "similarity": 0.7665,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "imaginary",
+      "b": "critical",
+      "weight": 0.542,
+      "similarity": 0.6451,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "imaginary",
+      "b": "scale",
+      "weight": 0.635,
+      "similarity": 0.6605,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "imaginary",
+      "b": "turning",
+      "weight": 0.536,
+      "similarity": 0.6378,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "instrument",
+      "b": "museum",
+      "weight": 0.613,
+      "similarity": 0.6344,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "instrument",
+      "b": "band",
+      "weight": 0.614,
+      "similarity": 0.7314,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "surrealist",
+      "b": "phantom",
+      "weight": 0.559,
+      "similarity": 0.6654,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "surrealist",
+      "b": "surrealism",
+      "weight": 0.742,
+      "similarity": 0.8836,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "surrealist",
+      "b": "magical",
+      "weight": 0.654,
+      "similarity": 0.7782,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "surrealist",
+      "b": "strange",
+      "weight": 0.724,
+      "similarity": 0.7657,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "surrealist",
+      "b": "vision",
+      "weight": 0.763,
+      "similarity": 0.8128,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "cabinet",
+      "b": "library",
+      "weight": 0.516,
+      "similarity": 0.6141,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "cabinet",
+      "b": "curiosity",
+      "weight": 0.7,
+      "similarity": 0.7376,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "cabinet",
+      "b": "licorne",
+      "weight": 0.474,
+      "similarity": 0.4684,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "ecology",
+      "b": "nature",
+      "weight": 0.67,
+      "similarity": 0.7975,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "ecology",
+      "b": "italy",
+      "weight": 0.571,
+      "similarity": 0.5836,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "ecology",
+      "b": "garden",
+      "weight": 0.458,
+      "similarity": 0.5447,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "ecology",
+      "b": "myth",
+      "weight": 0.647,
+      "similarity": 0.6745,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "library",
+      "b": "museum",
+      "weight": 0.585,
+      "similarity": 0.6967,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "magic",
+      "b": "magical",
+      "weight": 0.73,
+      "similarity": 0.8692,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "magic",
+      "b": "weather",
+      "weight": 0.409,
+      "similarity": 0.3905,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "monster",
+      "b": "strange",
+      "weight": 0.618,
+      "similarity": 0.7358,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "museum",
+      "b": "laboratory",
+      "weight": 0.477,
+      "similarity": 0.5678,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "nature",
+      "b": "garden",
+      "weight": 0.519,
+      "similarity": 0.6177,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "nature",
+      "b": "impossible",
+      "weight": 0.602,
+      "similarity": 0.6208,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "nature",
+      "b": "animal",
+      "weight": 0.525,
+      "similarity": 0.6255,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "nature",
+      "b": "weather",
+      "weight": 0.423,
+      "similarity": 0.5041,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "phantom",
+      "b": "ghost",
+      "weight": 0.65,
+      "similarity": 0.7743,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "phantom",
+      "b": "afterlife",
+      "weight": 0.473,
+      "similarity": 0.5634,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "spirit",
+      "b": "ghost",
+      "weight": 0.764,
+      "similarity": 0.8133,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "america",
+      "b": "latin",
+      "weight": 0.682,
+      "similarity": 0.716,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "america",
+      "b": "politic",
+      "weight": 0.654,
+      "similarity": 0.6826,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "america",
+      "b": "trade",
+      "weight": 0.445,
+      "similarity": 0.5303,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "italy",
+      "b": "myth",
+      "weight": 0.601,
+      "similarity": 0.6194,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "italy",
+      "b": "play",
+      "weight": 0.553,
+      "similarity": 0.5623,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "literary",
+      "b": "production",
+      "weight": 0.592,
+      "similarity": 0.6087,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "literary",
+      "b": "critical",
+      "weight": 0.587,
+      "similarity": 0.6984,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "literary",
+      "b": "poetic",
+      "weight": 0.692,
+      "similarity": 0.8242,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "literary",
+      "b": "tales",
+      "weight": 0.632,
+      "similarity": 0.7519,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "literary",
+      "b": "value",
+      "weight": 0.541,
+      "similarity": 0.5478,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
+      "a": "lost",
+      "b": "sound",
+      "weight": 0.666,
+      "similarity": 0.6972,
+      "sharedBooks": 1,
+      "relation": "shared-books"
+    },
+    {
       "a": "lost",
       "b": "future",
-      "weight": 0.405,
-      "similarity": 0.3865,
+      "weight": 0.592,
+      "similarity": 0.609,
       "sharedBooks": 1,
       "relation": "shared-books"
     },
     {
       "a": "lost",
       "b": "punk",
-      "weight": 0.438,
-      "similarity": 0.4258,
+      "weight": 0.527,
+      "similarity": 0.5315,
       "sharedBooks": 1,
       "relation": "shared-books"
     },
     {
       "a": "curiosity",
-      "b": "city",
-      "weight": 0.385,
-      "similarity": 0.4581,
+      "b": "laboratory",
+      "weight": 0.503,
+      "similarity": 0.5994,
       "sharedBooks": 0,
       "relation": "semantic"
     },
     {
       "a": "decorative",
-      "b": "laboratory",
-      "weight": 0.182,
-      "similarity": 0.2172,
+      "b": "emblem",
+      "weight": 0.597,
+      "similarity": 0.7112,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "decorative",
+      "b": "fashion",
+      "weight": 0.54,
+      "similarity": 0.6424,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "decorative",
+      "b": "baroque",
+      "weight": 0.641,
+      "similarity": 0.7626,
       "sharedBooks": 0,
       "relation": "semantic"
     },
     {
       "a": "miniature",
       "b": "block",
-      "weight": 0.548,
-      "similarity": 0.5563,
+      "weight": 0.638,
+      "similarity": 0.6638,
       "sharedBooks": 1,
       "relation": "shared-books"
     },
     {
       "a": "miniature",
       "b": "latin",
-      "weight": 0.52,
-      "similarity": 0.5227,
+      "weight": 0.595,
+      "similarity": 0.6126,
       "sharedBooks": 1,
       "relation": "shared-books"
     },
     {
       "a": "cinema",
-      "b": "medicine",
-      "weight": 0.356,
-      "similarity": 0.4244,
+      "b": "fashion",
+      "weight": 0.537,
+      "similarity": 0.6387,
       "sharedBooks": 0,
       "relation": "semantic"
     },
     {
       "a": "cinema",
-      "b": "wax",
-      "weight": 0.289,
-      "similarity": 0.3435,
+      "b": "film",
+      "weight": 0.733,
+      "similarity": 0.873,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "cinema",
+      "b": "vision",
+      "weight": 0.534,
+      "similarity": 0.636,
       "sharedBooks": 0,
       "relation": "semantic"
     },
     {
       "a": "death",
-      "b": "weather",
-      "weight": 0.333,
-      "similarity": 0.3966,
+      "b": "afterlife",
+      "weight": 0.673,
+      "similarity": 0.8016,
       "sharedBooks": 0,
       "relation": "semantic"
     },
     {
       "a": "emblem",
-      "b": "wax",
-      "weight": 0.235,
-      "similarity": 0.2792,
+      "b": "baroque",
+      "weight": 0.554,
+      "similarity": 0.6601,
       "sharedBooks": 0,
       "relation": "semantic"
     },
     {
       "a": "fashion",
       "b": "film",
-      "weight": 0.522,
-      "similarity": 0.5261,
+      "weight": 0.714,
+      "similarity": 0.7536,
       "sharedBooks": 1,
       "relation": "shared-books"
     },
     {
-      "a": "garden",
-      "b": "trade",
-      "weight": 0.127,
-      "similarity": 0.1508,
+      "a": "medicine",
+      "b": "laboratory",
+      "weight": 0.44,
+      "similarity": 0.5244,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "medicine",
+      "b": "human",
+      "weight": 0.444,
+      "similarity": 0.5291,
       "sharedBooks": 0,
       "relation": "semantic"
     },
     {
       "a": "sound",
-      "b": "underground",
-      "weight": 0.464,
-      "similarity": 0.5525,
+      "b": "band",
+      "weight": 0.587,
+      "similarity": 0.6993,
       "sharedBooks": 0,
       "relation": "semantic"
     },
     {
-      "a": "sound",
-      "b": "future",
-      "weight": 0.446,
-      "similarity": 0.4351,
-      "sharedBooks": 1,
-      "relation": "shared-books"
+      "a": "wax",
+      "b": "human",
+      "weight": 0.463,
+      "similarity": 0.5514,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "architect",
+      "b": "visionary",
+      "weight": 0.554,
+      "similarity": 0.6596,
+      "sharedBooks": 0,
+      "relation": "semantic"
     },
     {
       "a": "impossible",
       "b": "play",
-      "weight": 0.563,
-      "similarity": 0.5748,
+      "weight": 0.68,
+      "similarity": 0.7136,
       "sharedBooks": 1,
       "relation": "shared-books"
     },
     {
       "a": "performing",
       "b": "baroque",
-      "weight": 0.477,
-      "similarity": 0.4716,
+      "weight": 0.663,
+      "similarity": 0.6935,
       "sharedBooks": 1,
       "relation": "shared-books"
     },
     {
       "a": "performing",
-      "b": "france",
-      "weight": 0.404,
-      "similarity": 0.3853,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "production",
-      "b": "divine",
-      "weight": 0.398,
-      "similarity": 0.3777,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "production",
-      "b": "presence",
-      "weight": 0.433,
-      "similarity": 0.4201,
-      "sharedBooks": 1,
-      "relation": "shared-books"
+      "b": "play",
+      "weight": 0.562,
+      "similarity": 0.6696,
+      "sharedBooks": 0,
+      "relation": "semantic"
     },
     {
       "a": "production",
       "b": "value",
-      "weight": 0.495,
-      "similarity": 0.4934,
+      "weight": 0.594,
+      "similarity": 0.6109,
       "sharedBooks": 1,
       "relation": "shared-books"
     },
     {
       "a": "underground",
       "b": "artist",
-      "weight": 0.46,
-      "similarity": 0.4516,
+      "weight": 0.591,
+      "similarity": 0.6082,
       "sharedBooks": 1,
       "relation": "shared-books"
     },
     {
       "a": "underground",
       "b": "city",
-      "weight": 0.418,
-      "similarity": 0.4023,
+      "weight": 0.591,
+      "similarity": 0.6081,
       "sharedBooks": 1,
       "relation": "shared-books"
     },
     {
       "a": "underground",
       "b": "york",
-      "weight": 0.471,
-      "similarity": 0.4647,
+      "weight": 0.639,
+      "similarity": 0.6645,
       "sharedBooks": 1,
       "relation": "shared-books"
     },
     {
       "a": "visionary",
       "b": "artist",
-      "weight": 0.486,
-      "similarity": 0.4827,
+      "weight": 0.754,
+      "similarity": 0.8013,
       "sharedBooks": 1,
       "relation": "shared-books"
     },
     {
       "a": "visionary",
       "b": "french",
-      "weight": 0.4,
-      "similarity": 0.3805,
+      "weight": 0.654,
+      "similarity": 0.6821,
       "sharedBooks": 1,
       "relation": "shared-books"
     },
     {
       "a": "visionary",
-      "b": "vision",
-      "weight": 0.611,
-      "similarity": 0.7268,
+      "b": "turning",
+      "weight": 0.517,
+      "similarity": 0.6158,
       "sharedBooks": 0,
       "relation": "semantic"
     },
     {
       "a": "animal",
       "b": "punk",
-      "weight": 0.533,
-      "similarity": 0.5391,
+      "weight": 0.504,
+      "similarity": 0.5044,
       "sharedBooks": 1,
       "relation": "shared-books"
     },
     {
       "a": "artist",
       "b": "french",
-      "weight": 0.528,
-      "similarity": 0.5322,
+      "weight": 0.618,
+      "similarity": 0.6397,
       "sharedBooks": 1,
       "relation": "shared-books"
     },
     {
       "a": "artist",
       "b": "york",
-      "weight": 0.473,
-      "similarity": 0.4667,
+      "weight": 0.593,
+      "similarity": 0.6103,
       "sharedBooks": 1,
       "relation": "shared-books"
     },
     {
       "a": "band",
       "b": "tales",
-      "weight": 0.462,
-      "similarity": 0.4536,
+      "weight": 0.621,
+      "similarity": 0.6429,
       "sharedBooks": 1,
       "relation": "shared-books"
     },
     {
       "a": "baroque",
       "b": "france",
-      "weight": 0.469,
-      "similarity": 0.4629,
+      "weight": 0.681,
+      "similarity": 0.7149,
       "sharedBooks": 1,
       "relation": "shared-books"
     },
     {
       "a": "block",
       "b": "latin",
-      "weight": 0.47,
-      "similarity": 0.4639,
+      "weight": 0.574,
+      "similarity": 0.5871,
       "sharedBooks": 1,
       "relation": "shared-books"
     },
     {
       "a": "block",
       "b": "value",
-      "weight": 0.51,
-      "similarity": 0.5114,
+      "weight": 0.573,
+      "similarity": 0.5863,
       "sharedBooks": 1,
       "relation": "shared-books"
     },
     {
       "a": "city",
       "b": "york",
-      "weight": 0.425,
-      "similarity": 0.4098,
+      "weight": 0.74,
+      "similarity": 0.7854,
       "sharedBooks": 1,
       "relation": "shared-books"
     },
     {
       "a": "divine",
+      "b": "magical",
+      "weight": 0.639,
+      "similarity": 0.7606,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "divine",
       "b": "presence",
-      "weight": 0.886,
-      "similarity": 0.9109,
+      "weight": 0.827,
+      "similarity": 0.841,
       "sharedBooks": 2,
       "relation": "shared-books"
     },
     {
       "a": "france",
+      "b": "french",
+      "weight": 0.742,
+      "similarity": 0.8828,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
+      "a": "france",
       "b": "licorne",
-      "weight": 0.492,
-      "similarity": 0.4901,
+      "weight": 0.614,
+      "similarity": 0.6351,
       "sharedBooks": 1,
       "relation": "shared-books"
+    },
+    {
+      "a": "french",
+      "b": "licorne",
+      "weight": 0.458,
+      "similarity": 0.5454,
+      "sharedBooks": 0,
+      "relation": "semantic"
     },
     {
       "a": "future",
       "b": "home",
-      "weight": 0.602,
-      "similarity": 0.6211,
-      "sharedBooks": 1,
-      "relation": "shared-books"
-    },
-    {
-      "a": "human",
-      "b": "scale",
-      "weight": 0.478,
-      "similarity": 0.4726,
+      "weight": 0.591,
+      "similarity": 0.6071,
       "sharedBooks": 1,
       "relation": "shared-books"
     },
     {
       "a": "latin",
       "b": "politic",
-      "weight": 0.452,
-      "similarity": 0.4419,
+      "weight": 0.656,
+      "similarity": 0.6856,
       "sharedBooks": 1,
       "relation": "shared-books"
     },
     {
+      "a": "magical",
+      "b": "presence",
+      "weight": 0.573,
+      "similarity": 0.6817,
+      "sharedBooks": 0,
+      "relation": "semantic"
+    },
+    {
       "a": "poetic",
       "b": "politic",
-      "weight": 0.752,
-      "similarity": 0.7997,
+      "weight": 0.579,
+      "similarity": 0.5936,
       "sharedBooks": 1,
       "relation": "shared-books"
     },
     {
       "a": "poetic",
       "b": "turning",
-      "weight": 0.495,
-      "similarity": 0.4931,
+      "weight": 0.635,
+      "similarity": 0.6599,
       "sharedBooks": 1,
       "relation": "shared-books"
     },
     {
       "a": "strange",
       "b": "vision",
-      "weight": 0.374,
-      "similarity": 0.3489,
+      "weight": 0.632,
+      "similarity": 0.6559,
       "sharedBooks": 1,
       "relation": "shared-books"
+    },
+    {
+      "a": "trade",
+      "b": "value",
+      "weight": 0.466,
+      "similarity": 0.5543,
+      "sharedBooks": 0,
+      "relation": "semantic"
     }
   ],
   "books": [
