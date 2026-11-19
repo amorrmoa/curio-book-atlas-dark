@@ -1,9 +1,9 @@
 {
   "meta": {
     "catalog": "Curio Book Atlas",
-    "updated_at": "2026-11-19T01:53:27Z",
+    "updated_at": "2026-11-19T04:04:18Z",
     "source": "curio_catalog.xlsx",
-    "count": 189,
+    "count": 190,
     "notice": "月別書誌リストと14テーマを掲載。ISBNの未確認項目は空欄とし、取得根拠は各書籍の詳細に記載。"
   },
   "books": [
@@ -3287,6 +3287,24 @@
       "theme": "books",
       "related": [
         "art"
+      ],
+      "origin": "manual_excel"
+    },
+    {
+      "id": "curio-190",
+      "title": "Book Talk in Early Modern Europe",
+      "author": "Noah Millstone",
+      "publisher": "Princeton University Press",
+      "year": 2027,
+      "month": 6,
+      "source_url": "https://press.princeton.edu/books/hardcover/9780691272764/book-talk-in-early-modern-europe",
+      "isbn": "9780691272764",
+      "isbn_source_url": "https://press.princeton.edu/books/hardcover/9780691272764/book-talk-in-early-modern-europe",
+      "isbn_method": "出版社公式ページ確認（ハードカバー、米国刊行日2027-06-08）",
+      "theme": "books",
+      "related": [
+        "wunder",
+        "society"
       ],
       "origin": "manual_excel"
     }
