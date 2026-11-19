@@ -1,9 +1,9 @@
 {
   "meta": {
     "catalog": "Curio Book Atlas",
-    "updated_at": "2026-11-19T01:52:35Z",
+    "updated_at": "2026-11-19T01:53:27Z",
     "source": "curio_catalog.xlsx",
-    "count": 181,
+    "count": 189,
     "notice": "月別書誌リストと14テーマを掲載。ISBNの未確認項目は空欄とし、取得根拠は各書籍の詳細に記載。"
   },
   "books": [
@@ -3151,6 +3151,142 @@
       "related": [
         "wunder",
         "society"
+      ],
+      "origin": "manual_excel"
+    },
+    {
+      "id": "curio-182",
+      "title": "The Sounds of Lost Futures: British Musical Hauntology",
+      "author": "Jamie Sexton",
+      "publisher": "Reaktion Books",
+      "year": 2026,
+      "month": 7,
+      "source_url": "https://reaktionbooks.co.uk/work/the-sounds-of-lost-futures",
+      "isbn": "9781836392477",
+      "isbn_source_url": "https://reaktionbooks.co.uk/work/the-sounds-of-lost-futures",
+      "isbn_method": "新刊候補リストより転記（刊行情報の再確認推奨）",
+      "theme": "music",
+      "related": [
+        "media"
+      ],
+      "origin": "manual_excel"
+    },
+    {
+      "id": "curio-183",
+      "title": "I Came, I Saw, I Collected: A History of the Souvenir",
+      "author": "Maggie Popkin",
+      "publisher": "Reaktion Books",
+      "year": 2027,
+      "month": 5,
+      "source_url": "https://reaktionbooks.co.uk/work/i-came-i-saw-i-collected",
+      "isbn": "9781836393658",
+      "isbn_source_url": "https://reaktionbooks.co.uk/work/i-came-i-saw-i-collected",
+      "isbn_method": "新刊候補リストより転記（刊行情報の再確認推奨）",
+      "theme": "wunder",
+      "related": [
+        "books"
+      ],
+      "origin": "manual_excel"
+    },
+    {
+      "id": "curio-184",
+      "title": "Aiming for the Stars: The Life and Times of Odilon Redon",
+      "author": "Ted Gott",
+      "publisher": "Reaktion Books",
+      "year": 2026,
+      "month": 11,
+      "source_url": "https://reaktionbooks.co.uk/work/aiming-for-the-stars",
+      "isbn": "9781836392705",
+      "isbn_source_url": "https://reaktionbooks.co.uk/work/aiming-for-the-stars",
+      "isbn_method": "新刊候補リストより転記（刊行情報の再確認推奨）",
+      "theme": "surreal",
+      "related": [
+        "art"
+      ],
+      "origin": "manual_excel"
+    },
+    {
+      "id": "curio-185",
+      "title": "Cutting Up Books: A Writing Method in Critical Thinking",
+      "author": "Ania Malinowska",
+      "publisher": "Intellect Books",
+      "year": 2026,
+      "month": null,
+      "source_url": "https://www.intellectbooks.com/cutting-up-books",
+      "isbn": "9781835953785",
+      "isbn_source_url": "https://www.intellectbooks.com/cutting-up-books",
+      "isbn_method": "新刊候補リストより転記（刊行情報の再確認推奨）",
+      "theme": "books",
+      "related": [
+        "surreal"
+      ],
+      "origin": "manual_excel"
+    },
+    {
+      "id": "curio-186",
+      "title": "The History of Science in 100 Diagrams: A Visual Tour from Ancient Star Maps to the Double Helix",
+      "author": "Jack Challoner",
+      "publisher": "The MIT Press",
+      "year": 2027,
+      "month": 3,
+      "source_url": "https://mitpress.mit.edu/9780262063678/the-history-of-science-in-100-diagrams/",
+      "isbn": "9780262063678",
+      "isbn_source_url": "https://mitpress.mit.edu/9780262063678/the-history-of-science-in-100-diagrams/",
+      "isbn_method": "新刊候補リストより転記（刊行情報の再確認推奨）",
+      "theme": "science",
+      "related": [
+        "books"
+      ],
+      "origin": "manual_excel"
+    },
+    {
+      "id": "curio-187",
+      "title": "The Wicked Witch: Origins of an Enduring Worldwide Belief",
+      "author": "Gregory Forth",
+      "publisher": "Reaktion Books",
+      "year": 2027,
+      "month": 4,
+      "source_url": "https://reaktionbooks.co.uk/work/the-wicked-witch",
+      "isbn": "9781836393580",
+      "isbn_source_url": "https://reaktionbooks.co.uk/work/the-wicked-witch",
+      "isbn_method": "新刊候補リストより転記（刊行情報の再確認推奨）",
+      "theme": "magic",
+      "related": [
+        "grotesque"
+      ],
+      "origin": "manual_excel"
+    },
+    {
+      "id": "curio-188",
+      "title": "Gnomes: A Strange History",
+      "author": "Gregory Ariail",
+      "publisher": "Reaktion Books",
+      "year": 2027,
+      "month": 6,
+      "source_url": "https://reaktionbooks.co.uk/work/gnomes",
+      "isbn": "9781836393764",
+      "isbn_source_url": "https://reaktionbooks.co.uk/work/gnomes",
+      "isbn_method": "新刊候補リストより転記（刊行情報の再確認推奨）",
+      "theme": "magic",
+      "related": [
+        "grotesque"
+      ],
+      "origin": "manual_excel"
+    },
+    {
+      "id": "curio-189",
+      "title": "Engraving Between Iconoclasm and Revolt: Art History and the Printed Image in Early Modern Europe",
+      "author": "Edward H. Wouk",
+      "publisher": "University of Chicago Press",
+      "year": 2027,
+      "month": 7,
+      "source_url": "https://press.uchicago.edu/ucp/books/book/chicago/E/bo288997650.html",
+      "isbn": "9780226858173",
+      "isbn_source_url": "https://press.uchicago.edu/ucp/books/book/chicago/E/bo288997650.html",
+      "isbn_method": "新刊候補リストより転記（刊行情報の再確認推奨）",
+      "theme": "books",
+      "related": [
+        "art"
       ],
       "origin": "manual_excel"
     }
