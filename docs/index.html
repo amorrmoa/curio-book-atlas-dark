@@ -616,7 +616,29 @@ body > .wrap, body > .foot {position: relative; z-index: 1;}
   .masthead-right > a[href="publishers.html"] {padding:8px 6px;font-size:11px;}
   .masthead-right {gap:8px;}
 }
-
+/* Illustration from the approved blue camel artwork. Decorative only. */
+.hero { isolation:isolate; grid-template-columns:minmax(0,1.2fr) minmax(330px,.8fr); }
+.hero-camel {
+  position:absolute;
+  left:31%;
+  bottom:0;
+  width:30%;
+  height:auto;
+  z-index:0;
+  opacity:.96;
+  pointer-events:none;
+  user-select:none;
+}
+.hero-copy, .feature-panel {position:relative;z-index:1;}
+@media(max-width:900px) {
+  .hero {grid-template-columns:minmax(0,1fr) minmax(300px,.88fr);}
+  .hero-camel {left:29%;width:34%;bottom:2%;}
+}
+@media(max-width:720px) {
+  .hero {grid-template-columns:1fr;}
+  .hero-camel {left:auto;right:0;top:70px;bottom:auto;width:52%;max-width:250px;opacity:.58;}
+}
+@media print {.hero-camel {display:none;}}
 </style>
 </head>
 <body>
