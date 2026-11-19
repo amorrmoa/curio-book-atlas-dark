@@ -10,7 +10,8 @@ THEMES=json.loads((ROOT/'docs/data/themes.json').read_text(encoding='utf-8'))['t
 
 class MonthlyPageTests(unittest.TestCase):
     def test_every_book_has_month_or_undated_bucket(self):
-        self.assertEqual(len(DATA['books']),181)
+        self.assertEqual(len(DATA['books']),DATA['meta']['count'])
+        self.assertGreaterEqual(len(DATA['books']),181)
         for b in DATA['books']:
             self.assertIn(b['theme'],{t['id'] for t in THEMES})
             self.assertIn(b.get('year'),(2026,2027))

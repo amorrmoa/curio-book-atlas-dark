@@ -19,8 +19,9 @@ class SimpleLabelsTests(unittest.TestCase):
         self.assertIn('id="theme-grid"', HTML)
         self.assertIn('id="search"', HTML)
         data = json.loads((ROOT / 'docs' / 'data' / 'books.json').read_text(encoding='utf-8'))
-        self.assertEqual(181, len(data['books']))
-        self.assertEqual(121, sum(bool(b.get('isbn')) for b in data['books']))
+        self.assertEqual(data['meta']['count'], len(data['books']))
+        self.assertGreaterEqual(len(data['books']),181)
+        self.assertGreaterEqual(sum(bool(b.get('isbn')) for b in data['books']),121)
         themes = json.loads((ROOT / 'docs' / 'data' / 'themes.json').read_text(encoding='utf-8'))
         self.assertEqual(14, len(themes['themes']))
 

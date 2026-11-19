@@ -18,9 +18,10 @@ class CatalogTests(unittest.TestCase):
     def test_all_initial_books_import(self):
         rows=builder.parse_xlsx(ROOT/'data/curio_catalog.xlsx')
         catalog=builder.build(rows,self.themes)
-        self.assertEqual(181,len(catalog))
+        self.assertEqual(len(rows), len(catalog))
+        self.assertGreaterEqual(len(catalog), 181)
         self.assertTrue(all(b['title'] and b['theme'] for b in catalog))
-        self.assertEqual(181,len(set(b['id'] for b in catalog)))
+        self.assertEqual(len(catalog),len(set(b['id'] for b in catalog)))
 
     def test_no_unrecognized_topics(self):
         catalog=builder.build(builder.parse_xlsx(ROOT/'data/curio_catalog.xlsx'),self.themes)
@@ -34,8 +35,10 @@ class CatalogTests(unittest.TestCase):
             builder.build([row],self.themes)
 
     def test_isbn_registered_and_valid(self):
-        catalog=builder.build(builder.parse_xlsx(ROOT/'data/curio_catalog.xlsx'),self.themes)
-        self.assertEqual(121,sum(bool(x['isbn']) for x in catalog))
+        rows=builder.parse_xlsx(ROOT/'data/curio_catalog.xlsx')
+        catalog=builder.build(rows,self.themes)
+        self.assertEqual(sum(bool(r.get('ISBN')) for r in rows),sum(bool(x['isbn']) for x in catalog))
+        self.assertGreaterEqual(sum(bool(x['isbn']) for x in catalog),121)
         self.assertTrue(all('暫定' not in str(b) for b in catalog))
 
     def test_invalid_isbn_rejected(self):

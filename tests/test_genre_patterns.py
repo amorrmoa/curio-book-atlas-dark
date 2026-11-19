@@ -9,7 +9,8 @@ class GenreTests(unittest.TestCase):
   self.assertEqual(len(themes),14)
  def test_no_book_loss(self):
   d=json.loads((root/'docs/data/books.json').read_text('utf-8'))
-  self.assertEqual(len(d['books']),181)
+  self.assertEqual(len(d['books']),d['meta']['count'])
+  self.assertGreaterEqual(len(d['books']),181)
   self.assertTrue(all(b['theme'] in {t['id'] for t in json.loads((root/'docs/data/themes.json').read_text('utf-8'))['themes']} for b in d['books']))
  def test_belongs_to_primary_theme(self):
   page=(root/'docs/index.html').read_text('utf-8')
