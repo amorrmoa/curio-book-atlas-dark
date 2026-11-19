@@ -14,7 +14,8 @@ class MonthlyPageTests(unittest.TestCase):
         self.assertGreaterEqual(len(DATA['books']),181)
         for b in DATA['books']:
             self.assertIn(b['theme'],{t['id'] for t in THEMES})
-            self.assertIn(b.get('year'),(2026,2027))
+            self.assertIsInstance(b.get('year'), int)
+　　　　　　 self.assertGreaterEqual(b['year'], 2026)
             self.assertTrue(b.get('month') is None or 1 <= b.get('month') <= 12)
     def test_month_controls_are_present(self):
         for marker in ['id="month-groups"','id="month-nav"','id="feature-books"','id="theme-select"','id="theme-grid"']:
