@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#073451">
 <title>CURIO IDEA ATLAS — 言葉の航路</title>
-<!-- 2026-11 Czech maritime typography -->
+<!-- 2026-11 Czech maritime typography / semantic zoom & collision avoidance -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow+Condensed:wght@800;900&display=swap" rel="stylesheet">
@@ -314,11 +314,33 @@ body{background:#072c4b}
   #foot{font-size:8px;letter-spacing:.08em;}
 }
 
+
+/* Semantic zoom: keep all node labels a stable screen size and hide collisions.
+   Label positions are screen-space presentation only. Underlying semantic X/Y
+   coordinates and the book-to-concept links are not changed. */
+.node text{opacity:0;transition:opacity .12s ease}
+.node.label-visible text,.node:hover text,.node:focus text,
+.node.active text,.node.matched text{opacity:1}
+.node.minor text{opacity:0}
+.node.minor.label-visible text,.node.minor:hover text,
+.node.minor:focus text,.node.minor.active text,.node.minor.matched text{opacity:1}
+.node rect{pointer-events:all}
+.route{transition:opacity .14s ease}
+
+/* More of the screen belongs to the chart, without stretching the UI art. */
+#brand {left:clamp(20px,2.8vw,48px);top:clamp(20px,2.8vw,39px)}
+#title {font-size:clamp(47px,4.25vw,69px)}
+#camelArt {width:clamp(300px,33vw,505px)}
+@media(max-width:730px){
+  #brand{left:18px;top:19px}
+  #title{font-size:39px}
+  #camelArt{width:min(82vw,395px)}
+}
 </style>
 </head>
 <body>
 <div id="app">
-  <svg id="sea" viewBox="0 0 1360 900" role="img" aria-label="概念が航路で結ばれた海図">
+  <svg id="sea" viewBox="0 0 1600 900" role="img" aria-label="概念が航路で結ばれた海図">
     <defs>
       <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#b1d6db" stroke-opacity=".045" stroke-width="1"/></pattern>
       <pattern id="specks" width="120" height="150" patternUnits="userSpaceOnUse"><circle cx="20" cy="24" r="1.4" fill="#8fbfc8" opacity=".17"/><circle cx="87" cy="89" r=".8" fill="#e4b9c6" opacity=".18"/></pattern>
@@ -326,11 +348,11 @@ body{background:#072c4b}
     <g id="oceanForms" aria-hidden="true">
       <path d="M0 0 H340 L0 265 Z" fill="#183f62" opacity=".82"/>
       <path d="M485 0 H1350 C1120 125 960 160 865 278 C770 393 604 393 480 375 Z" fill="#1b5977" opacity=".42"/>
-      <path d="M-70 595 C170 635 350 690 545 660 S930 610 1160 692 S1420 690 1490 653 V920 H-70Z" fill="#22607d" opacity=".55"/>
-      <path d="M-70 740 C250 669 420 835 695 775 S1045 792 1420 740 V925 H-70Z" fill="#0b3f60" opacity=".83"/>
-      <path d="M-60 880 Q210 790 400 855 T800 838 T1400 812 V930 H-60Z" fill="#0a2d50" opacity=".85"/>
+      <path d="M-70 595 C170 635 350 690 545 660 S930 610 1160 692 S1420 690 1650 653 V920 H-70Z" fill="#22607d" opacity=".55"/>
+      <path d="M-70 740 C250 669 420 835 695 775 S1045 792 1650 740 V925 H-70Z" fill="#0b3f60" opacity=".83"/>
+      <path d="M-60 880 Q210 790 400 855 T800 838 T1650 812 V930 H-60Z" fill="#0a2d50" opacity=".85"/>
     </g>
-    <rect width="1360" height="900" fill="url(#grid)"/><rect width="1360" height="900" fill="url(#specks)"/>
+    <rect width="1600" height="900" fill="url(#grid)"/><rect width="1600" height="900" fill="url(#specks)"/>
     <g opacity=".45" aria-hidden="true">
       <path class="currentLine" d="M-70 270 C260 120 340 360 675 250 S1050 60 1460 260" />
       <path class="currentLine" d="M-60 685 C170 550 355 782 652 620 S1020 780 1440 535" />
@@ -367,7 +389,38 @@ body{background:#072c4b}
 'use strict';
 const DATA=ATLAS_DATA;
 const NS='http://www.w3.org/2000/svg';
-const view={x:0,y:0,w:1360,h:900};
+// Responsive ocean-canvas projection: keep the original semantic UMAP
+// coordinates untouched. Only their display positions are stretched into
+// the available marine chart area, between title and the search controls.
+const CANVAS_W=1600, CANVAS_H=900;
+const view={x:0,y:0,w:CANVAS_W,h:CANVAS_H};
+function presentPoint(c){
+  // The original map is anchored to the established 190-book geometry.
+  // Fixed anchors avoid shifting old concepts when new books are added.
+  const rx=Number(c.x), ry=Number(c.y);
+  // Fixed x-axis landmarks expand the central cluster without moving nodes
+  // unpredictably when a new title changes the data distribution.
+  const knots=[
+    [355,300],[570,344],[640,470],[720,650],[772,810],
+    [820,930],[881,1060],[972,1170],[1216,1370],[1220,1420]
+  ];
+  let mapped=344+(rx-570)*1.64;
+  for(let i=1;i<knots.length;i++){
+    const a=knots[i-1],b=knots[i];
+    if(rx<=b[0]){
+      const t=Math.max(0,Math.min(1,(rx-a[0])/(b[0]-a[0])));
+      mapped=a[1]+t*(b[1]-a[1]); break;
+    }
+  }
+  // Blend linear and quantile-spread coordinates to retain local geography.
+  const linear=rx<570?344+(rx-570)*.27:344+(rx-570)*1.64;
+  const x=linear*.35+mapped*.65 + (rx>1215?(450-ry)*.10:0);
+  const y=ry<188?82+(ry-188)*.3:82+(ry-188)*1.15;
+  return {x:Math.min(1510,Math.max(280,x)),y:Math.min(800,Math.max(48,y))};
+}
+const plotPoints=new Map(DATA.concepts.map(c=>[c.id,presentPoint(c)]));
+const at=c=>plotPoints.get(c.id);
+
 const svg=document.getElementById('sea');
 const routeLayer=document.getElementById('routeLayer');
 const nodeLayer=document.getElementById('nodeLayer');
@@ -375,36 +428,47 @@ const details=document.getElementById('detail');
 const input=document.getElementById('search');
 const byId=new Map(DATA.concepts.map(c=>[c.id,c]));
 const byBook=new Map(DATA.books.map(b=>[b.id,b]));
-const links=new Map();
 const neighbors=new Map(DATA.concepts.map(c=>[c.id,[]]));
 DATA.edges.forEach(e=>{neighbors.get(e.a)?.push(e.b);neighbors.get(e.b)?.push(e.a)});
 let selected=null,query='';
 let pressed=null,dragMoved=false;
+let reflowFrame=0;
 function el(tag,attrs){const e=document.createElementNS(NS,tag);if(attrs)Object.entries(attrs).forEach(([k,v])=>e.setAttribute(k,String(v)));return e}
-function updateView(){svg.setAttribute('viewBox',`${view.x} ${view.y} ${view.w} ${view.h}`)}
+function requestReflow(){
+ if(reflowFrame)cancelAnimationFrame(reflowFrame);
+ reflowFrame=requestAnimationFrame(()=>{reflowFrame=0;reflowLabels()});
+}
+function updateView(){svg.setAttribute('viewBox',`${view.x} ${view.y} ${view.w} ${view.h}`);requestReflow()}
 function goHome(){
   if(window.matchMedia('(max-width:730px)').matches){
-    // Mobile: display a readable slice of the sea map; horizontal panning reveals the rest.
-    view.x=590;view.y=0;view.h=900;
+    // Mobile remains a pannable close-up; keep labels comfortable for touch.
+    view.h=900;
     view.w=900*Math.max(0.38,svg.clientWidth/Math.max(svg.clientHeight,1));
-  }else{view.x=0;view.y=0;view.w=1360;view.h=900;}
+    view.x=810-view.w/2;view.y=0;
+  }else{
+    view.w=CANVAS_W;view.h=CANVAS_H;view.x=0;view.y=0;
+  }
   updateView();
 }
 const routeEls=[];
 DATA.edges.forEach(e=>{
  const a=byId.get(e.a),b=byId.get(e.b);if(!a||!b)return;
- const path=el('path',{class:'route',d:`M${a.x} ${a.y} Q${(a.x+b.x)/2+((a.y-b.y)*.08)} ${(a.y+b.y)/2-((a.x-b.x)*.08)} ${b.x} ${b.y}`});
+ const pa=at(a), pb=at(b);
+ const path=el('path',{class:'route',d:`M${pa.x} ${pa.y} Q${(pa.x+pb.x)/2+((pa.y-pb.y)*.065)} ${(pa.y+pb.y)/2-((pa.x-pb.x)*.065)} ${pb.x} ${pb.y}`});
  const hint=el('title');hint.textContent=`${a.label} ↔ ${b.label}: cosine ${Number(e.similarity||0).toFixed(2)}, shared books ${e.sharedBooks||0}`;path.appendChild(hint);
- path.dataset.a=e.a;path.dataset.b=e.b;routeLayer.appendChild(path);routeEls.push(path);
+ path.dataset.a=e.a;path.dataset.b=e.b;
+ path.dataset.score=String(Number(e.weight||0)*1.35+Number(e.similarity||0)+Math.min(4,Number(e.sharedBooks||0))*.24);
+ routeLayer.appendChild(path);routeEls.push(path);
 });
 const nodeEls=new Map();
 DATA.concepts.forEach(c=>{
- const group=el('g',{class:`node ${c.major?'major':'minor'}`,tabindex:0,role:'button','aria-label':`${c.label}・${c.count}冊`});
+ const pos=at(c);
+ const group=el('g',{class:`node ${c.major?'major':'minor'}`,transform:`translate(${pos.x} ${pos.y})`,tabindex:0,role:'button','aria-label':`${c.label}・${c.count}冊`});
  group.dataset.concept=c.id;
- const hitbox=el('rect',{x:c.x-12,y:c.y-19,width:29+c.label.length*9.4,height:36,fill:'transparent'});
+ const hitbox=el('rect',{x:-17,y:-17,width:34,height:34,fill:'transparent'});
  group.appendChild(hitbox);
- const halo=el('circle',{cx:c.x,cy:c.y,r:Math.min(10.5,4.4+c.count*.72),fill:c.color});
- const text=el('text',{x:c.x+13,y:c.y+5});text.textContent=c.label;
+ const halo=el('circle',{cx:0,cy:0,r:Math.min(10.5,4.4+c.count*.72),fill:c.color});
+ const text=el('text',{x:pos.x>1240?-13:13,y:5,'text-anchor':pos.x>1240?'end':'start'});text.textContent=c.label;
  const title=el('title');title.textContent=`${c.label} — ${c.count}冊`;
  group.append(halo,text,title);
  group.addEventListener('click',()=>{if(!dragMoved)select(c.id)});
@@ -430,6 +494,34 @@ function select(id){
  related.forEach(r=>chipBox.appendChild(button(r.label,()=>select(r.id))));
  refreshHighlight();
 }
+// At normal scale, show a legible selection of the most useful routes.
+// Selection reveals all routes for the chosen concept. At high zoom the base
+// network is thinned out instead of becoming a dense web of intersecting lines.
+const rankedRoutes=[...routeEls].sort((a,b)=>Number(b.dataset.score)-Number(a.dataset.score));
+const baseRoutes=new Set();
+const degree=new Map();
+for(const p of rankedRoutes){
+ if(baseRoutes.size>=47)break;
+ const a=p.dataset.a,b=p.dataset.b;
+ if((degree.get(a)||0)>=3||(degree.get(b)||0)>=3)continue;
+ baseRoutes.add(p);degree.set(a,(degree.get(a)||0)+1);degree.set(b,(degree.get(b)||0)+1);
+}
+const sparseRoutes=new Set([...baseRoutes].sort((a,b)=>Number(b.dataset.score)-Number(a.dataset.score)).slice(0,18));
+function updateRoutes(){
+ const q=query.trim().toLocaleLowerCase();
+ const zoom=CANVAS_W/view.w;
+ for(const p of routeEls){
+   const active=!!selected&&(p.dataset.a===selected||p.dataset.b===selected);
+   const a=nodeEls.get(p.dataset.a),b=nodeEls.get(p.dataset.b);
+   let show;
+   if(selected)show=active;
+   else if(q)show=a?.classList.contains('matched')&&b?.classList.contains('matched');
+   else show=(zoom>2.2?sparseRoutes:baseRoutes).has(p);
+   p.style.display=show?'':'none';
+   p.style.opacity=show?'1':'0';
+   p.classList.toggle('active',active);
+ }
+}
 function refreshHighlight(){
  const q=query.trim().toLocaleLowerCase();
  let matches=0;
@@ -438,28 +530,76 @@ function refreshHighlight(){
   const bookMatch=q && c.books.some(id=>{
    const b=byBook.get(id);return [b?.title,b?.author,b?.publisher].some(v=>v?.toLocaleLowerCase().includes(q));
   });
-  const isMatch=!q || c.label.toLocaleLowerCase().includes(q) || bookMatch;
+  const isMatch=!q||c.label.toLocaleLowerCase().includes(q)||bookMatch;
   if(isMatch)matches++;
-  const adjacent=selected && (selected===c.id || neighbors.get(selected)?.includes(c.id));
+  const adjacent=selected&&(selected===c.id||neighbors.get(selected)?.includes(c.id));
   g.classList.toggle('active',selected===c.id);
   g.classList.toggle('matched',!!q&&isMatch);
-  g.classList.toggle('dim',!!q&&!isMatch || (!!selected&&!adjacent&&!q));
+  g.classList.toggle('dim',!!q&&!isMatch|| (!!selected&&!adjacent&&!q));
  }
- routeEls.forEach(p=>{
-   const active=selected&&(p.dataset.a===selected||p.dataset.b===selected);
-   p.classList.toggle('active',!!active);
-   if(q){
-    const a=nodeEls.get(p.dataset.a),b=nodeEls.get(p.dataset.b);
-    p.style.opacity=a?.classList.contains('matched')&&b?.classList.contains('matched')?1:.06;
-   }else p.style.opacity=selected&&!active?.09:1;
- });
+ updateRoutes();
  document.getElementById('empty').style.display=q&&!matches?'block':'none';
+ requestReflow();
+}
+function intersects(a,b,pad=5){
+ return a.left<b.right+pad&&a.right+pad>b.left&&a.top<b.bottom+pad&&a.bottom+pad>b.top;
+}
+function reflowLabels(){
+ if(!svg.clientWidth||!svg.clientHeight)return;
+ const mapScale=Math.min(svg.clientWidth/view.w,svg.clientHeight/view.h);
+ const inverseScale=1/Math.max(.1,mapScale);
+ const zoom=CANVAS_W/view.w;
+ const q=query.trim().toLocaleLowerCase();
+ // Restore every label to its dot's true coordinates. Only the *size* changes.
+ for(const c of DATA.concepts){
+  const g=nodeEls.get(c.id);
+  const p=at(c);g.setAttribute('transform',`translate(${p.x} ${p.y}) scale(${inverseScale})`);
+  g.classList.remove('label-visible');
+ }
+ const viewport=svg.getBoundingClientRect();
+ // Avoid labels behind the UI, preserving a clean poster composition.
+ const blocked=['brand','tools','zoomControls','camelArt','detail']
+  .map(id=>document.getElementById(id)).filter(x=>x&&x.getClientRects().length&&getComputedStyle(x).display!=='none')
+  .map(x=>x.getBoundingClientRect());
+ const occupied=[];
+ // Preserve white space on the first screen; reveal more place names as the
+ // user enters a region. Selected and search-matched labels take precedence.
+ const mobile=window.matchMedia('(max-width:730px)').matches;
+ const labelBudget=mobile?(zoom<1.6?9:zoom<2.5?15:22):(zoom<1.25?22:zoom<1.85?33:zoom<2.8?43:54);
+ let visibleLabels=0;
+ const candidates=[...DATA.concepts].sort((a,b)=>{
+  const score=c=>(selected===c.id?10000:0)+
+    (nodeEls.get(c.id).classList.contains('matched')?5000:0)+
+    (selected&&(neighbors.get(selected)||[]).includes(c.id)?300:0)+
+    (c.major?150:0)+Math.min(20,c.count||0)*3;
+  return score(b)-score(a)||a.id.localeCompare(b.id);
+ });
+ for(const c of candidates){
+  const g=nodeEls.get(c.id);
+  const isSelected=selected===c.id;
+  const isMatched=!!q&&g.classList.contains('matched');
+  const isNeighbor=!!selected&&(neighbors.get(selected)||[]).includes(c.id);
+  if(q&&!isMatched&&!isSelected&&!isNeighbor)continue;
+  if(!isSelected&&!isMatched&&!isNeighbor&&!c.major&&zoom<1.45)continue;
+  if(!isSelected&&!isMatched&&!isNeighbor&&visibleLabels>=labelBudget)continue;
+  const label=g.querySelector('text');
+  const box=label.getBoundingClientRect();
+  if(!box.width||!box.height)continue;
+  // Viewport and controls are measured in CSS pixels, never map coordinates.
+  if(box.right<viewport.left+6||box.left>viewport.right-6||box.bottom<viewport.top+6||box.top>viewport.bottom-6)continue;
+  if(!isSelected&&blocked.some(b=>intersects(box,b,4)))continue;
+  if(!isSelected&&occupied.some(b=>intersects(box,b,8)))continue;
+  g.classList.add('label-visible');
+  occupied.push(box);visibleLabels++; 
+ }
+ // Update whether default routes should thin further when zoomed in.
+ updateRoutes();
 }
 input.addEventListener('input',()=>{query=input.value;const q=query.trim().toLocaleLowerCase();const exact=DATA.concepts.find(c=>c.id.toLocaleLowerCase()===q||c.label.toLocaleLowerCase()===q);if(exact){select(exact.id)}else{selected=null;details.classList.remove('visible');refreshHighlight()}});
 document.getElementById('reset').addEventListener('click',()=>{query='';input.value='';selected=null;details.classList.remove('visible');goHome();refreshHighlight()});
 document.getElementById('detailClose').addEventListener('click',()=>{selected=null;details.classList.remove('visible');refreshHighlight()});
 function zoomBy(factor){
- const nw=Math.max(240,Math.min(1900,view.w*factor));
+ const nw=Math.max(240,Math.min(2400,view.w*factor));
  const nh=view.h*(nw/view.w);
  view.x+=(view.w-nw)/2;view.y+=(view.h-nh)/2;
  view.w=nw;view.h=nh;updateView();
@@ -470,7 +610,7 @@ document.getElementById('zoomOut').addEventListener('click',()=>zoomBy(1.22));
 function svgPoint(e){const rect=svg.getBoundingClientRect();return {x:(e.clientX-rect.left)/rect.width,y:(e.clientY-rect.top)/rect.height}}
 svg.addEventListener('wheel',e=>{
  e.preventDefault();const s=e.deltaY<0?.86:1.16;const p=svgPoint(e);
- const nw=Math.max(240,Math.min(1900,view.w*s));const nh=view.h*(nw/view.w);
+ const nw=Math.max(240,Math.min(2400,view.w*s));const nh=view.h*(nw/view.w);
  view.x+=(view.w-nw)*p.x;view.y+=(view.h-nh)*p.y;view.w=nw;view.h=nh;updateView();
 },{passive:false});
 svg.addEventListener('pointerdown',e=>{if(e.button!==0||e.target.closest?.('.node'))return;pressed={x:e.clientX,y:e.clientY,vx:view.x,vy:view.y};dragMoved=false;svg.setPointerCapture(e.pointerId)});
@@ -482,6 +622,8 @@ svg.addEventListener('pointermove',e=>{
 function stopDrag(){pressed=null;svg.classList.remove('dragging');requestAnimationFrame(()=>{dragMoved=false})}
 svg.addEventListener('pointerup',stopDrag);svg.addEventListener('pointercancel',stopDrag);
 window.addEventListener('keydown',e=>{if(e.key==='Escape'){selected=null;details.classList.remove('visible');refreshHighlight()}});
+window.addEventListener('resize',requestReflow);
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(requestReflow);
 document.getElementById('foot').textContent=`${DATA.meta.concepts} CONCEPTS · ${DATA.meta.books} BOOKS` + (DATA.meta.method==='preview'?' · PREVIEW':' · SEMANTIC');
 goHome();refreshHighlight();
 })();
